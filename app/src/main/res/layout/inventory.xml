@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="landscape">
+    <Button
+        android:id="@+id/Return2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вернуться"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/rasxodn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Расходники"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ваше снаряжение:"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" />
+    <ListView
+        android:id="@+id/predmets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:id="@+id/water"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

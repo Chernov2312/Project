@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/magazin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/Return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вернуться"
+            android:textSize="15dp" />
+        <Button
+            android:id="@+id/shieldbuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Улучшить щит 250"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/swordbuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Улучшить меч 250"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/clothescreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Укрепить одежду 250"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/smalbottlexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Маленькое зелье восстановления 50"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/mediumbottlexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Среднее зелье востановления 100"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/bigbottlexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Большое зелье восстановления 200"
+            android:textSize="15dp" />
+    </LinearLayout>
+</FrameLayout>

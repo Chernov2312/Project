@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solder"
+    android:screenOrientation="landscape"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold: 0"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Уровень: 1"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кол-во жизни:"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <ProgressBar
+            android:id="@+id/xit_points"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="142dp"
+            android:layout_height="39dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кол-во маны:"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <ProgressBar
+            android:id="@+id/Mana"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="142dp"
+            android:layout_height="39dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Голод: "
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <ProgressBar
+            android:id="@+id/Food"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="142dp"
+            android:layout_height="39dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Жажда: "
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+        <ProgressBar
+            android:id="@+id/water"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="142dp"
+            android:layout_height="39dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Введите своё имя"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="30dp"/>
+        <Button
+            android:id="@+id/rename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Изменить"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="right">
+        <Button
+            android:id="@+id/Inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Инвентарь"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="left">
+        <Button
+            android:id="@+id/Return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вернуться"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</RelativeLayout>
