@@ -45,6 +45,7 @@
         <activity android:name=".easyandmedium" />
         <activity android:name=".WinGame" />
         <activity android:name=".Weapon" />
+        <activity android:name=".Achivments" />
     </application>
 
 </manifest>

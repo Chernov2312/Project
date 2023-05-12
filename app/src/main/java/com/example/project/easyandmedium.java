@@ -113,12 +113,16 @@ public class easyandmedium extends Character_Settings {
                 setInventoryy(strings);
                 if (mob == 0) {
                     setGolds(getGolds() + 500);
+                    setTotal_money(getTotal_money() + 500);
                 } else if (mob == 1) {
                     setGolds(getGolds() + 200);
+                    setTotal_money(getTotal_money() + 200);
                 } else if (mob == 2) {
                     setGolds(getGolds() + 350);
+                    setTotal_money(getTotal_money() + 350);
                 } else if (mob == 3) {
                     setGolds(getGolds() + 700);
+                    setTotal_money(getTotal_money() + 700);
                 }
                 binding.Return.setVisibility(View.VISIBLE);
                 binding.gonext.setVisibility(View.VISIBLE);

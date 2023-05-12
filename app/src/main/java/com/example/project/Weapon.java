@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.example.project.databinding.WeaponBinding;
 
-public class Weapon extends Character_Settings{
+public class Weapon extends Character_Settings {
     WeaponBinding binding;
     Intent intent;
     int[] hillrasx = getHill();
@@ -22,44 +22,57 @@ public class Weapon extends Character_Settings{
         intent = new Intent(Weapon.this, MyService.class);
         startService(intent);
         binding.smalbottlexit.setOnClickListener(v -> {
-            hillrasx[0] += 1;
-            Toast.makeText(getApplicationContext(),
-                    "У вас есть " + hillrasx[0] + " маленьких хилок", Toast.LENGTH_SHORT).show();
+            if (getGolds() >= 50) {
+                setGolds(getGolds() - 50);
+                hillrasx[0] += 1;
+                Toast.makeText(getApplicationContext(),
+                        "У вас есть " + hillrasx[0] + " маленьких хилок", Toast.LENGTH_SHORT).show();
+            }
         });
         binding.mediumbottlexit.setOnClickListener(v -> {
+            if(getGolds() >= 100){
+                setGolds(getGolds() - 100);
             hillrasx[1] += 1;
             Toast.makeText(getApplicationContext(),
-                    "У вас есть " + hillrasx[1] + " средних хилок", Toast.LENGTH_SHORT).show();
+                    "У вас есть " + hillrasx[1] + " средних хилок", Toast.LENGTH_SHORT).show();}
         });
         binding.bigbottlexit.setOnClickListener(v -> {
-            hillrasx[2] += 1;
-            Toast.makeText(getApplicationContext(),
-                    "У вас есть " + hillrasx[2] + " больших хилок", Toast.LENGTH_SHORT).show();
-        });
+            if(getGolds() >= 200) {
+                setGolds(getGolds() - 200);
+                hillrasx[2] += 1;
+                Toast.makeText(getApplicationContext(),
+                        "У вас есть " + hillrasx[2] + " больших хилок", Toast.LENGTH_SHORT).show();
+            }});
         binding.shieldbuy.setOnClickListener(v -> {
-            setLvlshield(getLvlshield() + 1);
-            setBlockdamage(getBlockdamage() + 5);
-            Toast.makeText(getApplicationContext(),
-                    "Ваша защита увеличена на " + 5, Toast.LENGTH_SHORT).show();
-        });
+            if(getGolds() >= 250) {
+                setLvlshield(getLvlshield() + 1);
+                setBlockdamage(getBlockdamage() + 5);
+                Toast.makeText(getApplicationContext(),
+                        "Ваша защита увеличена на " + 5, Toast.LENGTH_SHORT).show();
+            }});
         binding.swordbuy.setOnClickListener(v -> {
-            setLvlmech(getLvlmech() + 1);
-            setDamage(getDamage() + 15);
-            Toast.makeText(getApplicationContext(),
-                    "Ваш урон увеличен на " + 15, Toast.LENGTH_SHORT).show();
-        });
+            if(getGolds() >= 300) {
+                setGolds(getGolds() - 300);
+                setLvlmech(getLvlmech() + 1);
+                setDamage(getDamage() + 15);
+                Toast.makeText(getApplicationContext(),
+                        "Ваш урон увеличен на " + 15, Toast.LENGTH_SHORT).show();
+            }});
         binding.clothescreate.setOnClickListener(v -> {
-            setLvlarmor(getLvlarmor() + 1);
-            setBlockdamage(getBlockdamage() + 10);
-            Toast.makeText(getApplicationContext(),
-                    "Ваша защита увеличена на " + 10, Toast.LENGTH_SHORT).show();
-        });
+            if(getGolds() >= 250) {
+                setGolds(getGolds() - 250);
+                setLvlarmor(getLvlarmor() + 1);
+                setBlockdamage(getBlockdamage() + 10);
+                Toast.makeText(getApplicationContext(),
+                        "Ваша защита увеличена на " + 10, Toast.LENGTH_SHORT).show();
+            }});
         binding.Return.setOnClickListener(v -> {
             setHill(hillrasx);
             Intent i = new Intent(Weapon.this, magazin.class);
             startActivity(i);
         });
     }
+
     @Override
     protected void onPause() {
         super.onPause();

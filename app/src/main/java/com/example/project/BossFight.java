@@ -12,7 +12,7 @@ import com.example.project.databinding.BossBinding;
 
 public class BossFight extends AppCompatActivity {
     BossBinding binding;
-    private static int BossXitpoints = 1000;
+    private static int BossXitpoints = 10000;
     Intent intent;
 
     @Override
@@ -26,7 +26,7 @@ public class BossFight extends AppCompatActivity {
         startService(intent);
         binding.attack.setOnClickListener(v -> {
            BossXitpoints -= Character_Settings.getDamage();
-           Character_Settings.setXit_points((int) (Character_Settings.getXit_points() - 200 * (1 - (float)Character_Settings.getBlockdamage()/100)));
+           Character_Settings.setXit_points((int) (Character_Settings.getXit_points() - 700 * (1 - (float)Character_Settings.getBlockdamage()/100)));
            binding.bossXp.setText("BOSS XP: " + BossXitpoints);
            if(BossXitpoints <= 0){
                Intent i = new Intent(BossFight.this, WinGame.class);

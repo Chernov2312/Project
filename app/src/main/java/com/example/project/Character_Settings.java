@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+
+
 import com.example.project.databinding.CharacterSettingsBinding;
 
 import java.util.ArrayList;
@@ -21,6 +23,9 @@ public class Character_Settings extends MainActivity {
     private static int maxMana = 1000;
     private static int Food = 50;
     private static int Water = 60;
+    private static int Maxmoney = 1000;
+    private static int killedmobs = 0;
+    private static int total_money = 1000;
     private static int[] foodf = {0, 0, 0};
     private static int[] waterr = {0, 0, 0};
     private static int[] hill = {0, 0, 0};
@@ -32,13 +37,13 @@ public class Character_Settings extends MainActivity {
     public static int lvlarmor = 1;
     static boolean s = true;
     private static ArrayList<String> inventoryy = new ArrayList<>();
-
     {
         if (s)
             inventoryy.add(0, "Пусто");
         if (Xit_points > maxXit_points) Xit_points = maxXit_points;
         if (Food > 100) Food = 100;
         if (Water > 100) Water = 100;
+        if(blockdamage > 99) blockdamage = 99;
         s = false;
     }
 
@@ -52,6 +57,7 @@ public class Character_Settings extends MainActivity {
         startService(intent);
         setInventory(0);
         binding.name.setText(name_person);
+        if(Maxmoney < golds) Maxmoney = golds;
         binding.Return.setOnClickListener(v -> {
             if (getMenu() == 0) {
                 Intent i = new Intent(Character_Settings.this, MainActivity.class);
@@ -87,6 +93,10 @@ public class Character_Settings extends MainActivity {
             Intent i = new Intent(Character_Settings.this, InventoryActivity.class);
             startActivity(i);
         });
+        binding.achivments.setOnClickListener(v -> {
+            Intent i = new Intent(Character_Settings.this, Achivments.class);
+            startActivity(i);
+        });
         binding.rename.setOnClickListener(v -> {
             name_person = String.valueOf(binding.name.getText());
         });
@@ -95,6 +105,34 @@ public class Character_Settings extends MainActivity {
         binding.Food.setProgress(Food);
         binding.water.setProgress(Water);
         binding.gold.setText("Gold: " + golds);
+        binding.achivments.setOnClickListener(v -> {
+            Intent i = new Intent(Character_Settings.this, Achivments.class);
+            startActivity(i);
+        });
+    }
+
+    public static int getMaxmoney() {
+        return Maxmoney;
+    }
+
+    public static void setMaxmoney(int maxmoney) {
+        Maxmoney = maxmoney;
+    }
+
+    public static int getKilledmobs() {
+        return killedmobs;
+    }
+
+    public static void setKilledmobs(int killedmobs) {
+        Character_Settings.killedmobs = killedmobs;
+    }
+
+    public static int getTotal_money() {
+        return total_money;
+    }
+
+    public static void setTotal_money(int total_money) {
+        Character_Settings.total_money = total_money;
     }
 
     public static int[] getHill() {
