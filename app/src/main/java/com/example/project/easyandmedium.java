@@ -84,6 +84,7 @@ public class easyandmedium extends Character_Settings {
             }
             ArrayList<String> strings = getInventoryy();
             if (mob_xit_points <= 0) {
+                setKilledmobs(getKilledmobs() + 1);
                 binding.mob.setText("Вы победили этого монстра");
                 binding.attack.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),
