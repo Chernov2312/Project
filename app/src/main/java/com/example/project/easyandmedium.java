@@ -23,10 +23,11 @@ public class easyandmedium extends Character_Settings {
         super.onCreate(savedInstanceState);
         binding = LowandmediumBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        k = Home.Randomlut2();
-        binding.Return.setVisibility(View.INVISIBLE);
-        binding.gonext.setVisibility(View.INVISIBLE);
-        this.invalidateOptionsMenu();
+        k = Home.Randomlut();
+        if (mob_xit_points > 0 || mob_xit_points == -1) {
+            binding.Return.setVisibility(View.INVISIBLE);
+            binding.gonext.setVisibility(View.INVISIBLE);
+        }
         if (Character_Settings.getLevel() == 1 || Character_Settings.getLevel() == 2 || Character_Settings.getLevel() == 3) {
             k = 2;
             mob = 1;
@@ -67,11 +68,11 @@ public class easyandmedium extends Character_Settings {
                 break;
         }
         binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
-        if (mob_xit_points <= 0 && mob_xit_points != -1) {
-            binding.Return.setVisibility(View.VISIBLE);
-            binding.gonext.setVisibility(View.VISIBLE);
-            binding.attack.setVisibility(View.INVISIBLE);
+        if(mob_xit_points < -1 || mob_xit_points == 0){
             binding.mob.setText("Вы победили этого монстра");
+            binding.attack.setVisibility(View.INVISIBLE);
+            binding.gonext.setVisibility(View.VISIBLE);
+            binding.Return.setVisibility(View.VISIBLE);
         }
         binding.attack.setOnClickListener(v -> {
             mob_xit_points -= Character_Settings.getDamage();
@@ -83,8 +84,8 @@ public class easyandmedium extends Character_Settings {
             }
             ArrayList<String> strings = getInventoryy();
             if (mob_xit_points <= 0) {
-                binding.attack.setVisibility(View.INVISIBLE);
                 binding.mob.setText("Вы победили этого монстра");
+                binding.attack.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),
                         "Ваше снаряжение улучшенно", Toast.LENGTH_SHORT).show();
                 int y = Home.Randomlut();
@@ -107,8 +108,8 @@ public class easyandmedium extends Character_Settings {
                     strings.set(1, "Нагрудник из кольчуги " + getLvlarmor() + "lvl");
                 }
                 Character_Settings.setLevel(getLevel() + 1);
-                Character_Settings.setDamage(getDamage() + 5);
-                Character_Settings.setMaxXit_points(getMaxXit_points() + 10);
+                Character_Settings.setDamage(getDamage() + 15);
+                Character_Settings.setMaxXit_points(getMaxXit_points() + 20);
                 Character_Settings.setInventoryy(strings);
                 if (mob == 0) {
                     Character_Settings.setGolds(Character_Settings.getGolds() + 500);
@@ -123,9 +124,9 @@ public class easyandmedium extends Character_Settings {
                 binding.gonext.setVisibility(View.VISIBLE);
                 this.invalidateOptionsMenu();
             }
-            intent = new Intent(easyandmedium.this, MyService.class);
-            startService(intent);
         });
+        intent = new Intent(easyandmedium.this, MyService.class);
+        startService(intent);
         binding.person.setOnClickListener(v -> {
             setMenu(7);
             Intent i = new Intent(easyandmedium.this, Character_Settings.class);
@@ -140,6 +141,7 @@ public class easyandmedium extends Character_Settings {
             recreate();
         });
     }
+
     @Override
     protected void onPause() {
         super.onPause();

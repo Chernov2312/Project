@@ -12,7 +12,7 @@ import com.example.project.databinding.InventoryBinding;
 
 import java.util.ArrayList;
 
-public class InventoryActivity extends MainActivity {
+public class InventoryActivity extends Character_Settings {
     private InventoryBinding binding;
     ArrayList<String> inventory = getInventoryy();
     Intent intent;

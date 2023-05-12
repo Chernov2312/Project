@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project.databinding.MagazinBinding;
 
-public class magazin extends AppCompatActivity {
+public class magazin extends Character_Settings {
     MagazinBinding binding;
     Intent intent;
     @Override
@@ -28,8 +28,8 @@ public class magazin extends AppCompatActivity {
             startActivity(i);
         });
         binding.Return.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            setWater(getWater() - 2);
+            setFood(getFood() - 1);
             Intent i = new Intent(magazin.this, Gorod.class);
             startActivity(i);
         });

@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.widget.Toast;
 import com.example.project.databinding.HomeBinding;
 
-public class Home extends MainActivity {
+public class Home extends Character_Settings {
     HomeBinding binding;
     static int boxcheked = 0;
-    int[] foodd = Character_Settings.getFoodf();
-    int[] waterd = Character_Settings.getWaterr();
+    int[] foodd = getFoodf();
+    int[] waterd = getWaterr();
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,9 @@ public class Home extends MainActivity {
         intent = new Intent(Home.this, MyService.class);
         startService(intent);
         binding.Return3.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setWater(Character_Settings.getWater() - 5);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            setWater(Character_Settings.getWater() - 2);
+            setWater(Character_Settings.getWater() - 5);
+            setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(Home.this, startgame.class);
             startActivity(i);
         });
@@ -40,26 +40,26 @@ public class Home extends MainActivity {
                 } else if (s == 1) {
                     Toast.makeText(getApplicationContext(),
                             "Вы нашли 100 монет", Toast.LENGTH_SHORT).show();
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 100);
+                    setGolds(getGolds() + 100);
                 } else if (s == 2) {
                     Toast.makeText(getApplicationContext(),
                             "Вы нашли 500 монет и 3 больших пайка", Toast.LENGTH_SHORT).show();
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 500);
+                    setGolds(getGolds() + 500);
                     foodd[2] += 3;
                 } else if (s == 3) {
                     Toast.makeText(getApplicationContext(),
                             "Вы нашли 500 монет,4 больших пайка и бутыль воды", Toast.LENGTH_SHORT).show();
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 500);
+                    setGolds(getGolds() + 500);
                     foodd[2] += 3;
                     waterd[2] += 1;
                 }
-                Character_Settings.setWater(Character_Settings.getWater() - 2);
-                Character_Settings.setFood(Character_Settings.getFood() - 1);
-                Character_Settings.setFoodd(foodd);
-                Character_Settings.setWaterr(waterd);
+                setWater(getWater() - 2);
+                setFood(getFood() - 1);
+                setFoodd(foodd);
+                setWaterr(waterd);
             }
-            Character_Settings.setWater(Character_Settings.getWater() - 5);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            setWater(getWater() - 5);
+            setFood(getFood() - 1);
 
             boxcheked = 1;
         });
