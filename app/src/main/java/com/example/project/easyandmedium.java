@@ -28,7 +28,7 @@ public class easyandmedium extends Character_Settings {
             binding.Return.setVisibility(View.INVISIBLE);
             binding.gonext.setVisibility(View.INVISIBLE);
         }
-        if (Character_Settings.getLevel() == 1 || Character_Settings.getLevel() == 2 || Character_Settings.getLevel() == 3) {
+        if (getLevel() == 1 || getLevel() == 2 || getLevel() == 3) {
             k = 2;
             mob = 1;
         }
@@ -75,10 +75,10 @@ public class easyandmedium extends Character_Settings {
             binding.Return.setVisibility(View.VISIBLE);
         }
         binding.attack.setOnClickListener(v -> {
-            mob_xit_points -= Character_Settings.getDamage();
-            Character_Settings.setXit_points((int) (Character_Settings.getXit_points() - mob_damage * (1 - (float) Character_Settings.getBlockdamage() / 100)));
+            mob_xit_points -= getDamage();
+            setXit_points((int) (getXit_points() - mob_damage * (1 - (float) getBlockdamage() / 100)));
             binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
-            if (Character_Settings.getXit_points() <= 0) {
+            if (getXit_points() <= 0) {
                 Intent i = new Intent(easyandmedium.this, GameLose.class);
                 startActivity(i);
             }
@@ -90,35 +90,35 @@ public class easyandmedium extends Character_Settings {
                         "Ваше снаряжение улучшенно", Toast.LENGTH_SHORT).show();
                 int y = Home.Randomlut();
                 if (y == 0) {
-                    Character_Settings.setLvlmech(getLvlmech() + 1);
-                    Character_Settings.setDamage(getDamage() + 15);
+                    setLvlmech(getLvlmech() + 1);
+                    setDamage(getDamage() + 15);
                     strings.set(0, "Короткий меч " + lvlmech + "lvl");
                 } else if (y == 1) {
-                    Character_Settings.setLvlmag(getLvlmag() + 1);
-                    Character_Settings.setDamage(getDamage() + 10);
+                    setLvlmag(getLvlmag() + 1);
+                    setDamage(getDamage() + 10);
                     strings.set(4, "Магический артефакт " + getLvlmag() + "lvl");
                 } else if (y == 2) {
-                    Character_Settings.setBlockdamage(getBlockdamage() + 5);
-                    Character_Settings.setLvlshield(getLvlshield() + 1);
+                    setBlockdamage(getBlockdamage() + 5);
+                    setLvlshield(getLvlshield() + 1);
                     strings.set(3, "Круглый щит " + getLvlshield() + "lvl");
                 } else if (y == 3) {
-                    Character_Settings.setLvlarmor(getLvlarmor() + 1);
-                    Character_Settings.setBlockdamage(getBlockdamage() + 10);
+                    setLvlarmor(getLvlarmor() + 1);
+                    setBlockdamage(getBlockdamage() + 10);
                     strings.set(2, "Кожаные сапоги " + getLvlarmor() + "lvl");
                     strings.set(1, "Нагрудник из кольчуги " + getLvlarmor() + "lvl");
                 }
-                Character_Settings.setLevel(getLevel() + 1);
-                Character_Settings.setDamage(getDamage() + 15);
-                Character_Settings.setMaxXit_points(getMaxXit_points() + 20);
-                Character_Settings.setInventoryy(strings);
+                setLevel(getLevel() + 1);
+                setDamage(getDamage() + 15);
+                setMaxXit_points(getMaxXit_points() + 20);
+                setInventoryy(strings);
                 if (mob == 0) {
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 500);
+                    setGolds(getGolds() + 500);
                 } else if (mob == 1) {
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 200);
+                    setGolds(getGolds() + 200);
                 } else if (mob == 2) {
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 350);
+                    setGolds(getGolds() + 350);
                 } else if (mob == 3) {
-                    Character_Settings.setGolds(Character_Settings.getGolds() + 700);
+                    setGolds(getGolds() + 700);
                 }
                 binding.Return.setVisibility(View.VISIBLE);
                 binding.gonext.setVisibility(View.VISIBLE);

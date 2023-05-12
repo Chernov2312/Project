@@ -42,17 +42,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Кол-во маны:"
-            android:textColor="@color/white"
-            android:textSize="30dp" />
-        <ProgressBar
-            android:id="@+id/Mana"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="142dp"
-            android:layout_height="39dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Голод: "
             android:textColor="@color/white"
             android:textSize="30dp" />

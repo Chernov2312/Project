@@ -92,7 +92,6 @@ public class Character_Settings extends MainActivity {
         });
         binding.level.setText("Уровень: " + level);
         binding.xitPoints.setProgress(Xit_points);
-        binding.Mana.setProgress(Mana);
         binding.Food.setProgress(Food);
         binding.water.setProgress(Water);
         binding.gold.setText("Gold: " + golds);
