@@ -9,7 +9,7 @@ import com.example.project.databinding.GildiaBinding;
 
 import java.util.ArrayList;
 
-public class gildia extends Character_Settings{
+public class Gildia extends Character_Settings{
     Intent intent;
     GildiaBinding binding;
     ArrayList<String> inventory2 = getInventoryy();
@@ -20,15 +20,15 @@ public class gildia extends Character_Settings{
         binding = GildiaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(7);
-        intent = new Intent(gildia.this, MyService.class);
+        intent = new Intent(Gildia.this, MyService.class);
         startService(intent);
         binding.Return.setOnClickListener(v -> {
-            Intent i = new Intent(gildia.this, Gorod.class);
+            Intent i = new Intent(Gildia.this, City.class);
             startActivity(i);
         });
         binding.person.setOnClickListener(v -> {
             setMenu(5);
-            Intent i = new Intent(gildia.this, Character_Settings.class);
+            Intent i = new Intent(Gildia.this, Character_Settings.class);
             startActivity(i);
         });
         if(!k){
@@ -47,12 +47,8 @@ public class gildia extends Character_Settings{
             setBlockdamage(getBlockdamage() + 15);
             setInventoryy(inventory2);
         });
-        binding.Boss.setOnClickListener(v -> {
-            Intent i = new Intent(gildia.this, BossFight.class);
-            startActivity(i);
-        });
         binding.podz.setOnClickListener(v -> {
-            Intent i = new Intent(gildia.this, Catacomb.class);
+            Intent i = new Intent(Gildia.this, Catacomb.class);
             startActivity(i);
         });
     }

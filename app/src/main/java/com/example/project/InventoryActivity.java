@@ -1,8 +1,5 @@
 package com.example.project;
 
-import static com.example.project.Character_Settings.getInventory;
-import static com.example.project.Character_Settings.getInventoryy;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -35,7 +32,7 @@ public class InventoryActivity extends Character_Settings {
             }
         });
         binding.rasxodn.setOnClickListener(v -> {
-            Intent i = new Intent(InventoryActivity.this, rasxodn.class);
+            Intent i = new Intent(InventoryActivity.this, Supplies.class);
             startActivity(i);
         });
     }

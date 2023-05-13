@@ -68,7 +68,7 @@ public class Weapon extends Character_Settings {
             }});
         binding.Return.setOnClickListener(v -> {
             setHill(hillrasx);
-            Intent i = new Intent(Weapon.this, magazin.class);
+            Intent i = new Intent(Weapon.this, Shop.class);
             startActivity(i);
         });
     }

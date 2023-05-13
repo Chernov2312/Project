@@ -32,17 +32,17 @@
         </activity>
         <activity android:name=".Character_Settings" />
         <activity android:name=".InventoryActivity" />
-        <activity android:name=".startgame" />
+        <activity android:name=".Startgame" />
         <activity android:name=".Home" />
-        <activity android:name=".Gorod" />
-        <activity android:name=".magazin" />
+        <activity android:name=".City" />
+        <activity android:name=".Shop" />
         <activity android:name=".Buyproduct" />
-        <activity android:name=".rasxodn" />
-        <activity android:name=".gildia" />
+        <activity android:name=".Supplies" />
+        <activity android:name=".Gildia" />
         <activity android:name=".BossFight" />
         <activity android:name=".GameLose" />
         <activity android:name=".Catacomb" />
-        <activity android:name=".easyandmedium" />
+        <activity android:name=".Easyandmedium" />
         <activity android:name=".WinGame" />
         <activity android:name=".Weapon" />
         <activity android:name=".Achivments" />

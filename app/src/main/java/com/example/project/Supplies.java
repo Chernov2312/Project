@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.example.project.databinding.RasxodnBinding;
 
-public class rasxodn extends Character_Settings {
+public class Supplies extends Character_Settings {
     RasxodnBinding binding;
     Intent intent;
     int[] foodr = getFoodf();
@@ -24,7 +24,7 @@ public class rasxodn extends Character_Settings {
         binding = RasxodnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(2);
-        intent = new Intent(rasxodn.this, MyService.class);
+        intent = new Intent(Supplies.this, MyService.class);
         startService(intent);
         String[] rasxodn2 = {"Маленький пайков: " + foodr[0],
                 "Средних пайков: " + foodr[1],
@@ -103,7 +103,7 @@ public class rasxodn extends Character_Settings {
         setWaterr(waterf);
         setHill(hillrasx);
         binding.return2.setOnClickListener(v -> {
-            Intent i = new Intent(rasxodn.this, InventoryActivity.class);
+            Intent i = new Intent(Supplies.this, InventoryActivity.class);
             startActivity(i);
         });
     }

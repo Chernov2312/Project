@@ -26,7 +26,7 @@ public class Home extends Character_Settings {
             setWater(Character_Settings.getWater() - 2);
             setWater(Character_Settings.getWater() - 5);
             setFood(Character_Settings.getFood() - 1);
-            Intent i = new Intent(Home.this, startgame.class);
+            Intent i = new Intent(Home.this, Startgame.class);
             startActivity(i);
         });
         binding.person.setOnClickListener(v -> {

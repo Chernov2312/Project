@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             this.finishAffinity();
         });
         binding.play.setOnClickListener(v -> {
-            Intent i = new Intent(MainActivity.this, startgame.class);
+            Intent i = new Intent(MainActivity.this, Startgame.class);
             startActivity(i);
         });
     }

@@ -11,7 +11,7 @@ import com.example.project.databinding.LowandmediumBinding;
 
 import java.util.ArrayList;
 
-public class easyandmedium extends Character_Settings {
+public class Easyandmedium extends Character_Settings {
     LowandmediumBinding binding;
     static int mob_xit_points = -1;
     static int mob;
@@ -79,7 +79,7 @@ public class easyandmedium extends Character_Settings {
             setXit_points((int) (getXit_points() - mob_damage * (1 - (float) getBlockdamage() / 100)));
             binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
             if (getXit_points() <= 0) {
-                Intent i = new Intent(easyandmedium.this, GameLose.class);
+                Intent i = new Intent(Easyandmedium.this, GameLose.class);
                 startActivity(i);
             }
             ArrayList<String> strings = getInventoryy();
@@ -130,15 +130,15 @@ public class easyandmedium extends Character_Settings {
                 this.invalidateOptionsMenu();
             }
         });
-        intent = new Intent(easyandmedium.this, MyService.class);
+        intent = new Intent(Easyandmedium.this, MyService.class);
         startService(intent);
         binding.person.setOnClickListener(v -> {
             setMenu(7);
-            Intent i = new Intent(easyandmedium.this, Character_Settings.class);
+            Intent i = new Intent(Easyandmedium.this, Character_Settings.class);
             startActivity(i);
         });
         binding.Return.setOnClickListener(v -> {
-            Intent i = new Intent(easyandmedium.this, Catacomb.class);
+            Intent i = new Intent(Easyandmedium.this, Catacomb.class);
             startActivity(i);
         });
         binding.gonext.setOnClickListener(v -> {

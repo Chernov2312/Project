@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project.databinding.StartgameBinding;
 
-public class startgame extends AppCompatActivity {
+public class Startgame extends AppCompatActivity {
     StartgameBinding binding;
     Intent intent;
     @Override
@@ -19,23 +19,23 @@ public class startgame extends AppCompatActivity {
         binding = StartgameBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(4);
-        intent = new Intent(startgame.this, MyService.class);
+        intent = new Intent(Startgame.this, MyService.class);
         startService(intent);
         binding.goHome.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 2);
             Character_Settings.setFood(Character_Settings.getFood() - 1);
-            Intent i = new Intent(startgame.this, Home.class);
+            Intent i = new Intent(Startgame.this, Home.class);
             startActivity(i);
         });
         binding.person.setOnClickListener(v -> {
             setMenu(1);
-            Intent i = new Intent(startgame.this, Character_Settings.class);
+            Intent i = new Intent(Startgame.this, Character_Settings.class);
             startActivity(i);
         });
         binding.gocity.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 2);
             Character_Settings.setFood(Character_Settings.getFood() - 1);
-            Intent i = new Intent(startgame.this, Gorod.class);
+            Intent i = new Intent(Startgame.this, City.class);
             startActivity(i);
         });
     }

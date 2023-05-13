@@ -28,13 +28,14 @@ public class Character_Settings extends MainActivity {
     private static int total_money = 1000;
     private static int[] foodf = {0, 0, 0};
     private static int[] waterr = {0, 0, 0};
-    private static int[] hill = {0, 0, 0};
+    private static int[] hill = {4, 2, 3};
     public static int damage = 20;
     public static int blockdamage = 1;
     public static int lvlmech = 1;
     public static int lvlshield = 1;
     public static int lvlmag = 1;
     public static int lvlarmor = 1;
+    private static final int mammaxxitpoints = 300;
     static boolean s = true;
     private static ArrayList<String> inventoryy = new ArrayList<>();
     {
@@ -43,7 +44,8 @@ public class Character_Settings extends MainActivity {
         if (Xit_points > maxXit_points) Xit_points = maxXit_points;
         if (Food > 100) Food = 100;
         if (Water > 100) Water = 100;
-        if(blockdamage > 99) blockdamage = 99;
+        if(blockdamage > 90) blockdamage = 90;
+        if(mammaxxitpoints < mammaxxitpoints) maxXit_points = mammaxxitpoints;
         s = false;
     }
 
@@ -62,19 +64,19 @@ public class Character_Settings extends MainActivity {
                 Intent i = new Intent(Character_Settings.this, MainActivity.class);
                 startActivity(i);
             } else if (getMenu() == 1) {
-                Intent i = new Intent(Character_Settings.this, startgame.class);
+                Intent i = new Intent(Character_Settings.this, Startgame.class);
                 startActivity(i);
             } else if (getMenu() == 2) {
                 Intent i = new Intent(Character_Settings.this, Home.class);
                 startActivity(i);
             } else if (getMenu() == 3) {
-                Intent i = new Intent(Character_Settings.this, Gorod.class);
+                Intent i = new Intent(Character_Settings.this, City.class);
                 startActivity(i);
             } else if (getMenu() == 4) {
-                Intent i = new Intent(Character_Settings.this, magazin.class);
+                Intent i = new Intent(Character_Settings.this, Shop.class);
                 startActivity(i);
             } else if (getMenu() == 5) {
-                Intent i = new Intent(Character_Settings.this, gildia.class);
+                Intent i = new Intent(Character_Settings.this, Gildia.class);
                 startActivity(i);
             }
             else if (getMenu() == 6) {
@@ -82,7 +84,7 @@ public class Character_Settings extends MainActivity {
                 startActivity(i);
             }
             else if (getMenu() == 7) {
-                Intent i = new Intent(Character_Settings.this, easyandmedium.class);
+                Intent i = new Intent(Character_Settings.this, Easyandmedium.class);
                 startActivity(i);
             }
         });
@@ -99,10 +101,6 @@ public class Character_Settings extends MainActivity {
         binding.Food.setProgress(Food);
         binding.water.setProgress(Water);
         binding.gold.setText("Gold: " + golds);
-        binding.achivments.setOnClickListener(v -> {
-            Intent i = new Intent(Character_Settings.this, Achivments.class);
-            startActivity(i);
-        });
     }
 
     public static int getMaxmoney() {

@@ -18,11 +18,15 @@ public class Catacomb extends MainActivity{
         intent = new Intent(Catacomb.this, MyService.class);
         startService(intent);
         binding.return4.setOnClickListener(v -> {
-            Intent i = new Intent(Catacomb.this, gildia.class);
+            Intent i = new Intent(Catacomb.this, Gildia.class);
             startActivity(i);
         });
         binding.easyandmedium.setOnClickListener(v -> {
-            Intent i = new Intent(Catacomb.this, easyandmedium.class);
+            Intent i = new Intent(Catacomb.this, Easyandmedium.class);
+            startActivity(i);
+        });
+        binding.Boss.setOnClickListener(v -> {
+            Intent i = new Intent(Catacomb.this, BossFight.class);
             startActivity(i);
         });
     }

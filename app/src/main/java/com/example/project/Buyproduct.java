@@ -1,14 +1,12 @@
 package com.example.project;
 
 
-import static com.example.project.MainActivity.setM;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.project.databinding.FoodOtdelBinding;
 
 public class Buyproduct extends Character_Settings {
@@ -25,7 +23,7 @@ public class Buyproduct extends Character_Settings {
         intent = new Intent(Buyproduct.this, MyService.class);
         startService(intent);
         binding.Return.setOnClickListener(v -> {
-            Intent i = new Intent(Buyproduct.this, magazin.class);
+            Intent i = new Intent(Buyproduct.this, Shop.class);
             startActivity(i);
         });
         binding.smallfood.setOnClickListener(v -> {
