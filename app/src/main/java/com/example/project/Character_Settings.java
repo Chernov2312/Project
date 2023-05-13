@@ -29,8 +29,8 @@ public class Character_Settings extends MainActivity {
     private static int[] foodf = {0, 0, 0};
     private static int[] waterr = {0, 0, 0};
     private static int[] hill = {4, 2, 3};
-    public static int damage = 20000;
-    public static int blockdamage = 10000;
+    public static int damage = 20;
+    public static int blockdamage = 1;
     public static int lvlmech = 1;
     public static int lvlshield = 1;
     public static int lvlmag = 1;
