@@ -2,15 +2,18 @@ package com.example.project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
+
 import com.example.project.databinding.HomeBinding;
 
 public class Home extends Character_Settings {
     HomeBinding binding;
-    static int boxcheked = 0;
+    volatile static int boxcheked = 0;
     int[] foodd = getFoodf();
     int[] waterd = getWaterr();
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,42 +35,43 @@ public class Home extends Character_Settings {
             startActivity(i);
         });
         binding.box.setOnClickListener(v -> {
-            if (boxcheked == 0) {
-                int s = Randomlut();
-                if (s == 0) {
-                    Toast.makeText(getApplicationContext(),
-                            "Вы ничего не нашли", Toast.LENGTH_SHORT).show();
-                } else if (s == 1) {
-                    Toast.makeText(getApplicationContext(),
-                            "Вы нашли 100 монет", Toast.LENGTH_SHORT).show();
-                    setGolds(getGolds() + 100);
-                    setTotal_money(getTotal_money() + 100);
-                } else if (s == 2) {
-                    Toast.makeText(getApplicationContext(),
-                            "Вы нашли 500 монет и 3 больших пайка", Toast.LENGTH_SHORT).show();
-                    setGolds(getGolds() + 500);
-                    setTotal_money(getTotal_money() + 500);
-                    foodd[2] += 3;
-                } else if (s == 3) {
-                    Toast.makeText(getApplicationContext(),
-                            "Вы нашли 500 монет,4 больших пайка и бутыль воды", Toast.LENGTH_SHORT).show();
-                    setGolds(getGolds() + 500);
-                    setTotal_money(getTotal_money() + 500);
-                    foodd[2] += 3;
-                    waterd[2] += 1;
-                }
-                setWater(getWater() - 2);
-                setFood(getFood() - 1);
-                setFoodd(foodd);
-                setWaterr(waterd);
+            int s = Randomlut();
+            if (s == 0) {
+                Toast.makeText(getApplicationContext(),
+                        "Вы ничего не нашли", Toast.LENGTH_SHORT).show();
+            } else if (s == 1) {
+                Toast.makeText(getApplicationContext(),
+                        "Вы нашли 100 монет", Toast.LENGTH_SHORT).show();
+                setGolds(getGolds() + 100);
+                setTotal_money(getTotal_money() + 100);
+            } else if (s == 2) {
+                Toast.makeText(getApplicationContext(),
+                        "Вы нашли 500 монет и 3 больших пайка", Toast.LENGTH_SHORT).show();
+                setGolds(getGolds() + 500);
+                setTotal_money(getTotal_money() + 500);
+                foodd[2] += 3;
+            } else if (s == 3) {
+                Toast.makeText(getApplicationContext(),
+                        "Вы нашли 500 монет,4 больших пайка и бутыль воды", Toast.LENGTH_SHORT).show();
+                setGolds(getGolds() + 500);
+                setTotal_money(getTotal_money() + 500);
+                foodd[2] += 3;
+                waterd[2] += 1;
             }
+            setWater(getWater() - 2);
+            setFood(getFood() - 1);
+            setFoodd(foodd);
+            setWaterr(waterd);
             setWater(getWater() - 5);
             setFood(getFood() - 1);
 
             boxcheked = 1;
+            binding.box.setVisibility(View.INVISIBLE);
         });
+        if (boxcheked == 1) binding.box.setVisibility(View.INVISIBLE);
 
     }
+
     public static int Randomlut() {
         int a = (int) (Math.random() * 100);
         if (a <= 10) return 0;
@@ -75,6 +79,7 @@ public class Home extends Character_Settings {
         else if (a <= 75) return 2;
         else return 3;
     }
+
     public static int Randomlut2() {
         int a = (int) (Math.random() * 100);
         if (a <= 25) return 0;
@@ -82,6 +87,7 @@ public class Home extends Character_Settings {
         else if (a <= 75) return 2;
         else return 3;
     }
+
     @Override
     protected void onPause() {
         super.onPause();

@@ -28,6 +28,10 @@ public class BossFight extends AppCompatActivity {
            BossXitpoints -= Character_Settings.getDamage();
            Character_Settings.setXit_points((int) (Character_Settings.getXit_points() - 700 * (1 - (float)Character_Settings.getBlockdamage()/100)));
            binding.bossXp.setText("BOSS XP: " + BossXitpoints);
+           if(Character_Settings.getXit_points() < 0){
+               Intent i = new Intent(BossFight.this, GameLose.class);
+               startActivity(i);
+           }
            if(BossXitpoints <= 0){
                Intent i = new Intent(BossFight.this, WinGame.class);
                startActivity(i);

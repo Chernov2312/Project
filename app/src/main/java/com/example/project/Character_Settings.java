@@ -56,7 +56,6 @@ public class Character_Settings extends MainActivity {
         intent = new Intent(Character_Settings.this, MyService.class);
         startService(intent);
         setInventory(0);
-        binding.name.setText(name_person);
         if(Maxmoney < golds) Maxmoney = golds;
         binding.Return.setOnClickListener(v -> {
             if (getMenu() == 0) {
@@ -87,8 +86,6 @@ public class Character_Settings extends MainActivity {
                 startActivity(i);
             }
         });
-        binding.name.setText(name_person);
-        name_person = String.valueOf(binding.name.getText());
         binding.Inventory.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, InventoryActivity.class);
             startActivity(i);
@@ -96,9 +93,6 @@ public class Character_Settings extends MainActivity {
         binding.achivments.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, Achivments.class);
             startActivity(i);
-        });
-        binding.rename.setOnClickListener(v -> {
-            name_person = String.valueOf(binding.name.getText());
         });
         binding.level.setText("Уровень: " + level);
         binding.xitPoints.setProgress(Xit_points);

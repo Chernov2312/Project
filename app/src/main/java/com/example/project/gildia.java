@@ -13,7 +13,7 @@ public class gildia extends Character_Settings{
     Intent intent;
     GildiaBinding binding;
     ArrayList<String> inventory2 = getInventoryy();
-    private boolean k = true;
+    private static volatile boolean k = true;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class gildia extends Character_Settings{
             Intent i = new Intent(gildia.this, Character_Settings.class);
             startActivity(i);
         });
-        if(k == false){
+        if(!k){
             binding.nachsnar.setVisibility(View.INVISIBLE);
         }
         binding.nachsnar.setOnClickListener(v -> {
