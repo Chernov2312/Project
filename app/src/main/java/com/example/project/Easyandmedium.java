@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.project.databinding.LowandmediumBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -87,8 +88,7 @@ public class Easyandmedium extends Character_Settings {
                 setKilledmobs(getKilledmobs() + 1);
                 binding.mob.setText("Вы победили этого монстра");
                 binding.attack.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(),
-                        "Ваше снаряжение улучшенно", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.attack, "Ваше снаряжение улучшенно", Snackbar.LENGTH_SHORT).show();
                 int y = Home.Randomlut();
                 if (y == 0) {
                     setLvlmech(getLvlmech() + 1);

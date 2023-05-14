@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.project.databinding.RasxodnBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Supplies extends Character_Settings {
     RasxodnBinding binding;
@@ -85,8 +86,7 @@ public class Supplies extends Character_Settings {
                     hillrasx[2] -= 1;
                     rasxodn2[8] = "Больших хилок: " + hillrasx[2];
                 }
-                Toast.makeText(getApplicationContext(),
-                        "Жажда " + getWater() + " голод " + getFood() + " кол-во жизни " + getXit_points(), Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.listrasx, "Жажда " + getWater() + " голод " + getFood() + " кол-во жизни " + getXit_points(), Snackbar.LENGTH_SHORT).show();
                 recreate();
             }
         });

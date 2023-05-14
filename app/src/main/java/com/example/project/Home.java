@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.project.databinding.HomeBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Home extends Character_Settings {
     HomeBinding binding;
@@ -37,22 +38,18 @@ public class Home extends Character_Settings {
         binding.box.setOnClickListener(v -> {
             int s = Randomlut();
             if (s == 0) {
-                Toast.makeText(getApplicationContext(),
-                        "Вы ничего не нашли", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.box, "Вы ничего не нашли", Snackbar.LENGTH_SHORT).show();
             } else if (s == 1) {
-                Toast.makeText(getApplicationContext(),
-                        "Вы нашли 100 монет", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.box, "Вы нашли 100 монет", Snackbar.LENGTH_SHORT).show();
                 setGolds(getGolds() + 100);
                 setTotal_money(getTotal_money() + 100);
             } else if (s == 2) {
-                Toast.makeText(getApplicationContext(),
-                        "Вы нашли 500 монет и 3 больших пайка", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.box, "Вы нашли 500 монет и 3 больших пайка", Snackbar.LENGTH_SHORT).show();
                 setGolds(getGolds() + 500);
                 setTotal_money(getTotal_money() + 500);
                 foodd[2] += 3;
             } else if (s == 3) {
-                Toast.makeText(getApplicationContext(),
-                        "Вы нашли 500 монет,4 больших пайка и бутыль воды", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.box, "Вы нашли 500 монет,4 больших пайка и бутыль воды", Snackbar.LENGTH_SHORT).show();
                 setGolds(getGolds() + 500);
                 setTotal_money(getTotal_money() + 500);
                 foodd[2] += 3;

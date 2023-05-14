@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.project.databinding.FoodOtdelBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Buyproduct extends Character_Settings {
     FoodOtdelBinding binding;
@@ -30,48 +31,42 @@ public class Buyproduct extends Character_Settings {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 foodd[0] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + foodd[0] + " маленьких пайка", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.smallfood, "У вас есть " + foodd[0] + " маленьких пайка", Snackbar.LENGTH_SHORT).show();
             }
         });
         binding.sredfood.setOnClickListener(v -> {
             if (getGolds() >= 100) {
                 setGolds(Character_Settings.getGolds() - 100);
                 foodd[1] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + foodd[1] + " средних пайков", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.sredfood, "У вас есть " + foodd[1] + " средних пайков", Snackbar.LENGTH_SHORT).show();
             }
         });
         binding.bigfood.setOnClickListener(v -> {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 foodd[2] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + foodd[2] + " больших пайков", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.bigfood, "У вас есть " + foodd[2] + " больших пайков", Snackbar.LENGTH_SHORT).show();
             }
         });
         binding.smallwater.setOnClickListener(v -> {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 waterr[0] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + waterr[0] + " маленьких бутылок с водой", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.smallwater, "У вас есть " + waterr[0] + " маленьких бутылок с водой", Snackbar.LENGTH_SHORT).show();
             }
         });
         binding.sredwater.setOnClickListener(v -> {
             if (getGolds() >= 100) {
                 setGolds(getGolds() - 100);
                 waterr[1] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + waterr[1] + " фляг", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.smallwater, "У вас есть " + waterr[1] + " фляг", Snackbar.LENGTH_SHORT).show();
             }
         });
         binding.bigwater.setOnClickListener(v -> {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 waterr[2] += 1;
-                Toast.makeText(getApplicationContext(),
-                        "У вас есть " + waterr[2] + " бутылей с водой", Toast.LENGTH_SHORT).show();
+                Snackbar.make(binding.smallwater, "У вас есть " + waterr[2] + " бутылей с водой", Snackbar.LENGTH_SHORT).show();
             }
         });
         setWaterr(waterr);
