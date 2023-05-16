@@ -105,6 +105,7 @@ public class Supplies extends Character_Settings {
         binding.return2.setOnClickListener(v -> {
             Intent i = new Intent(Supplies.this, InventoryActivity.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

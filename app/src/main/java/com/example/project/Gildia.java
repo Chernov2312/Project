@@ -26,10 +26,11 @@ public class Gildia extends Character_Settings{
             Intent i = new Intent(Gildia.this, City.class);
             startActivity(i);
         });
+        setMenu(5);
         binding.person.setOnClickListener(v -> {
-            setMenu(5);
             Intent i = new Intent(Gildia.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         if(!k){
             binding.nachsnar.setVisibility(View.INVISIBLE);
@@ -50,6 +51,7 @@ public class Gildia extends Character_Settings{
         binding.podz.setOnClickListener(v -> {
             Intent i = new Intent(Gildia.this, Catacomb.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

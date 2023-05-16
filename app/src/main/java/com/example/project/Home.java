@@ -29,11 +29,13 @@ public class Home extends Character_Settings {
             setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(Home.this, Startgame.class);
             startActivity(i);
+            finish();
         });
+        setMenu(2);
         binding.person.setOnClickListener(v -> {
-            setMenu(2);
             Intent i = new Intent(Home.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.box.setOnClickListener(v -> {
             int s = Randomlut();

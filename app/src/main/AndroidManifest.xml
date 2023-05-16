@@ -46,6 +46,7 @@
         <activity android:name=".WinGame" />
         <activity android:name=".Weapon" />
         <activity android:name=".Achivments" />
+        <activity android:name=".Settings" />
     </application>
 
 </manifest>

@@ -18,6 +18,7 @@ public class Achivments extends Character_Settings{
         binding.Return.setOnClickListener(v -> {
             Intent i = new Intent(Achivments.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.minmaxnet.setText("Не открыто");
         binding.middlemaxnet.setText("Не открыто");

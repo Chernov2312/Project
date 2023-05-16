@@ -21,26 +21,30 @@ public class City extends AppCompatActivity {
         setM(5);
         intent = new Intent(City.this, MyService.class);
         startService(intent);
+        setMenu(3);
         binding.person.setOnClickListener(v -> {
-            setMenu(3);
             Intent i = new Intent(City.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.Return.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 2);
             Character_Settings.setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(City.this, Startgame.class);
             startActivity(i);
+            finish();
         });
         binding.magazin.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 2);
             Character_Settings.setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(City.this, Shop.class);
             startActivity(i);
+            finish();
         });
         binding.gild.setOnClickListener(v -> {
             Intent i = new Intent(City.this, Gildia.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

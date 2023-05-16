@@ -18,24 +18,29 @@ public class Shop extends Character_Settings {
         setM(6);
         intent = new Intent(Shop.this, MyService.class);
         startService(intent);
+        setMenu(4);
+        binding.moneyhave.setText("У вас: " + getGolds() + "$");
         binding.person.setOnClickListener(v -> {
-            setMenu(4);
             Intent i = new Intent(Shop.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.Return.setOnClickListener(v -> {
             setWater(getWater() - 2);
             setFood(getFood() - 1);
             Intent i = new Intent(Shop.this, City.class);
             startActivity(i);
+            finish();
         });
         binding.foodotdel.setOnClickListener(v -> {
             Intent i = new Intent(Shop.this, Buyproduct.class);
             startActivity(i);
+            finish();
         });
         binding.weaponotdel.setOnClickListener(v -> {
             Intent i = new Intent(Shop.this, Weapon.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

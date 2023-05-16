@@ -82,6 +82,7 @@ public class Easyandmedium extends Character_Settings {
             if (getXit_points() <= 0) {
                 Intent i = new Intent(Easyandmedium.this, GameLose.class);
                 startActivity(i);
+                finish();
             }
             ArrayList<String> strings = getInventoryy();
             if (mob_xit_points <= 0) {
@@ -132,14 +133,16 @@ public class Easyandmedium extends Character_Settings {
         });
         intent = new Intent(Easyandmedium.this, MyService.class);
         startService(intent);
+        setMenu(7);
         binding.person.setOnClickListener(v -> {
-            setMenu(7);
             Intent i = new Intent(Easyandmedium.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.Return.setOnClickListener(v -> {
             Intent i = new Intent(Easyandmedium.this, Catacomb.class);
             startActivity(i);
+            finish();
         });
         binding.gonext.setOnClickListener(v -> {
             mob_xit_points = -1;

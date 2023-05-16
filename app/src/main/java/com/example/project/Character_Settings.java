@@ -91,10 +91,12 @@ public class Character_Settings extends MainActivity {
         binding.Inventory.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, InventoryActivity.class);
             startActivity(i);
+            finish();
         });
         binding.achivments.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, Achivments.class);
             startActivity(i);
+            finish();
         });
         binding.level.setText("Уровень: " + level);
         binding.xitPoints.setProgress(Xit_points);

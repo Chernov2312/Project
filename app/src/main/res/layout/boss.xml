@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:screenOrientation="landscape"
     android:background="@drawable/bos">
     <TextView
@@ -12,24 +13,27 @@
         android:textSize="50dp"
         android:textColor="@color/white"
         android:background="@color/black"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/attack"
-            android:layout_gravity="right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Атаковать"/>
+            android:layout_gravity="right"
+            android:text="Атаковать"
+            android:textSize="20dp" />
+
         <Button
             android:id="@+id/person"
-            android:layout_gravity="right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Персонаж"/>
+            android:layout_gravity="right"
+            android:text="Персонаж"
+            android:textSize="20dp" />
     </LinearLayout>
 </FrameLayout>

@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:screenOrientation="landscape"
     android:background="@drawable/magazin">
+    <TextView
+        android:id="@+id/moneyhave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="У вас есть"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:background="@color/white"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

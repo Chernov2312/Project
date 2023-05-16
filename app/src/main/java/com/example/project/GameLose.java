@@ -23,6 +23,7 @@ public class GameLose extends AppCompatActivity {
         binding.returnplay.setOnClickListener(v -> {
             Intent i = new Intent(GameLose.this, MainActivity.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

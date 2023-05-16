@@ -28,8 +28,34 @@ public class MainActivity extends AppCompatActivity {
             this.finishAffinity();
         });
         binding.play.setOnClickListener(v -> {
-            Intent i = new Intent(MainActivity.this, Startgame.class);
-            startActivity(i);
+            if (getMenu() == 1 || getMenu() == 0) {
+                Intent i = new Intent(MainActivity.this, Startgame.class);
+                startActivity(i);
+            } else if (getMenu() == 2) {
+                Intent i = new Intent(MainActivity.this, Home.class);
+                startActivity(i);
+            } else if (getMenu() == 3) {
+                Intent i = new Intent(MainActivity.this, City.class);
+                startActivity(i);
+            } else if (getMenu() == 4) {
+                Intent i = new Intent(MainActivity.this, Shop.class);
+                startActivity(i);
+            } else if (getMenu() == 5) {
+                Intent i = new Intent(MainActivity.this, Gildia.class);
+                startActivity(i);
+            }
+            else if (getMenu() == 6) {
+                Intent i = new Intent(MainActivity.this, BossFight.class);
+                startActivity(i);
+            }
+            else if (getMenu() == 7) {
+                Intent i = new Intent(MainActivity.this, Easyandmedium.class);
+                startActivity(i);
+            }
+            else if (getMenu() == 8) {
+                Intent i = new Intent(MainActivity.this, WinGame.class);
+                startActivity(i);
+            }
         });
     }
 

@@ -26,17 +26,20 @@ public class Startgame extends AppCompatActivity {
             Character_Settings.setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(Startgame.this, Home.class);
             startActivity(i);
+            finish();
         });
+        setMenu(1);
         binding.person.setOnClickListener(v -> {
-            setMenu(1);
             Intent i = new Intent(Startgame.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
         binding.gocity.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 2);
             Character_Settings.setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(Startgame.this, City.class);
             startActivity(i);
+            finish();
         });
     }
 

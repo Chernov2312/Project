@@ -20,14 +20,17 @@ public class Catacomb extends MainActivity{
         binding.return4.setOnClickListener(v -> {
             Intent i = new Intent(Catacomb.this, Gildia.class);
             startActivity(i);
+            finish();
         });
         binding.easyandmedium.setOnClickListener(v -> {
             Intent i = new Intent(Catacomb.this, Easyandmedium.class);
             startActivity(i);
+            finish();
         });
         binding.Boss.setOnClickListener(v -> {
             Intent i = new Intent(Catacomb.this, BossFight.class);
             startActivity(i);
+            finish();
         });
     }
     @Override

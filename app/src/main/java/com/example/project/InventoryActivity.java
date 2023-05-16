@@ -29,11 +29,13 @@ public class InventoryActivity extends Character_Settings {
             if (getInventory() == 0) {
                 Intent i = new Intent(InventoryActivity.this, Character_Settings.class);
                 startActivity(i);
+                finish();
             }
         });
         binding.rasxodn.setOnClickListener(v -> {
             Intent i = new Intent(InventoryActivity.this, Supplies.class);
             startActivity(i);
+            finish();
         });
     }
 

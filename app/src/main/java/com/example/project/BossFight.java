@@ -31,16 +31,19 @@ public class BossFight extends AppCompatActivity {
            if(Character_Settings.getXit_points() < 0){
                Intent i = new Intent(BossFight.this, GameLose.class);
                startActivity(i);
+               finish();
            }
            if(BossXitpoints <= 0){
                Intent i = new Intent(BossFight.this, WinGame.class);
                startActivity(i);
+               finish();
            }
         });
         binding.person.setOnClickListener(v -> {
             MainActivity.setMenu(6);
             Intent i = new Intent(BossFight.this, Character_Settings.class);
             startActivity(i);
+            finish();
         });
     }
     @Override
