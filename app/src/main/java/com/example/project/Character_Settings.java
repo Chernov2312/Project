@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import com.example.project.databinding.CharacterSettingsBinding;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Character_Settings extends MainActivity {
     private CharacterSettingsBinding binding;
@@ -103,6 +104,11 @@ public class Character_Settings extends MainActivity {
         binding.Food.setProgress(Food);
         binding.water.setProgress(Water);
         binding.gold.setText("Gold: " + golds);
+        binding.settings.setOnClickListener(v -> {
+            Intent i = new Intent(Character_Settings.this, Settings.class);
+            startActivity(i);
+            finish();
+        });
     }
 
     public static int getMaxmoney() {
