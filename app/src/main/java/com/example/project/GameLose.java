@@ -1,6 +1,7 @@
 package com.example.project;
 
 import static com.example.project.MainActivity.setM;
+import static com.example.project.MainActivity.setMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class GameLose extends AppCompatActivity {
         binding = DeathBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(12);
+        setMenu(9);
         intent = new Intent(GameLose.this, MyService.class);
         startService(intent);
         binding.returnplay.setOnClickListener(v -> {

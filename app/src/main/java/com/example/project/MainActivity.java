@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, WinGame.class);
                 startActivity(i);
             }
+            else if (getMenu() == 9) {
+                Intent i = new Intent(MainActivity.this, GameLose.class);
+                startActivity(i);
+            }
         });
     }
 
