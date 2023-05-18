@@ -155,4 +155,29 @@ public class Easyandmedium extends Character_Settings {
         super.onPause();
         stopService(intent);
     }
+
+    public static int getMob_xit_points() {
+        return mob_xit_points;
+    }
+
+    public static void setMob_xit_points(int mob_xit_points) {
+        Easyandmedium.mob_xit_points = mob_xit_points;
+    }
+
+    public static int getMob() {
+        return mob;
+    }
+
+    public static void setMob(int mob) {
+        Easyandmedium.mob = mob;
+    }
+
+    public static int getMob_damage() {
+        return mob_damage;
+    }
+
+    public static void setMob_damage(int mob_damage) {
+        Easyandmedium.mob_damage = mob_damage;
+    }
+
 }

@@ -51,4 +51,12 @@ public class BossFight extends AppCompatActivity {
         super.onPause();
         stopService(intent);
     }
+
+    public static int getBossXitpoints() {
+        return BossXitpoints;
+    }
+
+    public static void setBossXitpoints(int bossXitpoints) {
+        BossXitpoints = bossXitpoints;
+    }
 }

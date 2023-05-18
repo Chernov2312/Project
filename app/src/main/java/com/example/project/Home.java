@@ -92,4 +92,12 @@ public class Home extends Character_Settings {
         super.onPause();
         stopService(intent);
     }
+
+    public static int getBoxcheked() {
+        return boxcheked;
+    }
+
+    public static void setBoxcheked(int boxcheked) {
+        Home.boxcheked = boxcheked;
+    }
 }
