@@ -56,7 +56,10 @@ public class Settings extends Character_Settings {
     private int[] Foodff = {0, 0, 0};
     private int[] Waterff = {0, 0, 0};
     private int[] Hillff = {0, 0, 0};
+    private static boolean music = true;
     private Set<String> set = new HashSet<>(getInventoryy());
+    Intent intent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +68,10 @@ public class Settings extends Character_Settings {
         binding.save.setOnClickListener(v -> {
             savePreference();
         });
+        binding.music.setChecked(music);
+        setM(2);
+        intent = new Intent(Settings.this, MyService.class);
+        startService(intent);
         binding.load.setOnClickListener(v -> {
             loadPreference();
         });
@@ -73,6 +80,30 @@ public class Settings extends Character_Settings {
             startActivity(i);
             finish();
         });
+        binding.music.setOnClickListener(v -> {
+            if (binding.music.isChecked()) {
+                music = true;
+                setM(2);
+                startService(intent);
+            } else {
+                music = false;
+                stopService(intent);
+            }
+        });
+        if (binding.music.isChecked()) {
+            music = true;
+            setM(2);
+            startService(intent);
+        } else {
+            music = false;
+            stopService(intent);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopService(intent);
     }
 
     private void loadPreference() {
@@ -152,5 +183,13 @@ public class Settings extends Character_Settings {
         ed.putBoolean(S_PREFERENCE, getS());
         ed.apply();
         Snackbar.make(binding.save, "Сохранение успешно", Snackbar.LENGTH_SHORT).show();
+    }
+
+    public static boolean isMusic() {
+        return music;
+    }
+
+    public static void setMusic(boolean music) {
+        Settings.music = music;
     }
 }

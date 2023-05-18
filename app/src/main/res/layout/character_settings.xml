@@ -93,11 +93,12 @@
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:gravity="left">
+
         <Button
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вернуться"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
     </LinearLayout>
 </RelativeLayout>
