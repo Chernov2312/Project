@@ -53,6 +53,7 @@ public class Settings extends Character_Settings {
     public final static String MOB_XIT_POINTS = "mob_xit_points";
     public final static String MOB = "mob";
     public final static String MOB_DAMAGE = "mob_damage";
+    public final static String MUSIC = "music";
     private int[] Foodff = {0, 0, 0};
     private int[] Waterff = {0, 0, 0};
     private int[] Hillff = {0, 0, 0};
@@ -98,6 +99,7 @@ public class Settings extends Character_Settings {
             music = false;
             stopService(intent);
         }
+        binding.music.setChecked(music);
     }
 
     @Override
@@ -140,10 +142,12 @@ public class Settings extends Character_Settings {
         Easyandmedium.setMob(sharedPreferences.getInt(MOB, Easyandmedium.getMob()));
         Easyandmedium.setMob_damage(sharedPreferences.getInt(MOB_DAMAGE, Easyandmedium.getMob_damage()));
         setFoodd(Foodff);
+        music = sharedPreferences.getBoolean(MUSIC, music);
         setWaterr(Waterff);
         setHill(Hillff);
         setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(INVENTORYY_PREFERENCE, set)));
         Snackbar.make(binding.load, "Последнее сохранение загруженно успешно", Snackbar.LENGTH_SHORT).show();
+        recreate();
     }
 
     private void savePreference() {
@@ -164,6 +168,7 @@ public class Settings extends Character_Settings {
         ed.putInt(TOTAL_MONEY_PREFERENCE, getTotal_money());
         ed.putInt(DAMAGE_PREFERENCE, getDamage());
         ed.putInt(BLOCKDAMAGE_PREFERENCE, getBlockdamage());
+        ed.putBoolean(MUSIC, music);
         ed.putInt(LVLMECH_PREFERENCE, getLvlmech());
         ed.putInt(LVLSHIELD_PREFERENCE, getLvlshield());
         ed.putInt(LVLMAG_PREFERENCE, getLvlmag());
