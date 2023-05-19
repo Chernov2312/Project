@@ -64,4 +64,13 @@
     <string name="bighillras">Большое зелье восстановления 200</string>
     <string name="wingame">Вы освободили город от постоянных атак монстров</string>
     <string name="menu">Меню</string>
+    <string name="netv">Общая ценность: </string>
+    <string name="$"> $</string>
+    <string name="maxnetvors2000"> Максимальное кол-во денег 2000$</string>
+    <string name="maxnetvors5000"> Максимальное кол-во денег 5000$</string>
+    <string name="maxnetvors10000"> Максимальное кол-во денег 10000$</string>
+    <string name="killed10mobs"> Убито 10 монстров</string>
+    <string name="killed50mobs"> Убито 50 монстров</string>
+    <string name="killed100mobs"> Убито 100 монстров</string>
+    <string name="dontopen">Не открыто</string>
 </resources>

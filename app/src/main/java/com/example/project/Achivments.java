@@ -20,18 +20,18 @@ public class Achivments extends Character_Settings{
             startActivity(i);
             finish();
         });
-        binding.minmaxnet.setText("Не открыто");
-        binding.middlemaxnet.setText("Не открыто");
-        binding.goldnet.setText("Не открыто");
-        binding.earlykiller.setText("Не открыто");
-        binding.middlekiller.setText("Не открыто");
-        binding.prokiller.setText("Не открыто");
-        binding.netvors.setText("Общая ценность: " + getTotal_money() + " $");
-        if(getMaxmoney() > 2000) binding.minmaxnet.setText("Максимальное кол-во денег 2000$");
-        if(getMaxmoney() > 5000) binding.middlemaxnet.setText("Максимальное кол-во денег 5000$");
-        if(getMaxmoney() > 2000) binding.goldnet.setText("Максимальное кол-во денег 10000$");
-        if(getKilledmobs() > 10) binding.earlykiller.setText("Убито 10 монстров");
-        if(getKilledmobs() > 50) binding.middlekiller.setText("Убито 50 монстров");
-        if(getKilledmobs() > 100) binding.prokiller.setText("Убито 100 монстров");
+        binding.minmaxnet.setText(getResources().getString(R.string.dontopen));
+        binding.middlemaxnet.setText(getResources().getString(R.string.dontopen));
+        binding.goldnet.setText(getResources().getString(R.string.dontopen));
+        binding.earlykiller.setText(getResources().getString(R.string.dontopen));
+        binding.middlekiller.setText(getResources().getString(R.string.dontopen));
+        binding.prokiller.setText(getResources().getString(R.string.dontopen));
+        binding.netvors.setText( getResources().getString(R.string.netv) + getTotal_money() + getResources().getString(R.string.$));
+        if(getMaxmoney() > 2000) binding.minmaxnet.setText(getResources().getString(R.string.maxnetvors2000));
+        if(getMaxmoney() > 5000) binding.middlemaxnet.setText(getResources().getString(R.string.maxnetvors5000));
+        if(getMaxmoney() > 2000) binding.goldnet.setText(getResources().getString(R.string.maxnetvors10000));
+        if(getKilledmobs() > 10) binding.earlykiller.setText(getResources().getString(R.string.killed10mobs));
+        if(getKilledmobs() > 50) binding.middlekiller.setText(getResources().getString(R.string.killed50mobs));
+        if(getKilledmobs() > 100) binding.prokiller.setText(getResources().getString(R.string.killed100mobs));
     }
 }
