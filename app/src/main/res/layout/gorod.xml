@@ -7,8 +7,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Вы находитесь в городе"
-        android:textSize="40dp"
+        android:text="@string/city"
+        android:textSize="40sp"
         android:textColor="@color/white"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,28 +20,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Персонаж"
-            android:textSize="20dp" />
+            android:text="@string/person"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Вернуться к дому"
-            android:textSize="20dp" />
+            android:text="@string/returnedhome"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/gild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Пойти в гильдию"
-            android:textSize="20dp" />
+            android:text="@string/go_gildia"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/magazin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Пойти в магазин"
-            android:textSize="20dp" />
+            android:text="@string/goshop"
+            android:textSize="20sp" />
     </LinearLayout>
 </FrameLayout>

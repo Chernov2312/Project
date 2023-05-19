@@ -16,30 +16,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Вернуться"
-            android:textSize="20dp" />
+            android:text="@string/returned"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:textSize="20dp"
-            android:text="Персонаж"/>
+            android:textSize="20sp"
+            android:text="@string/person"/>
 
         <Button
             android:id="@+id/podz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Пойти в подземелье"
-            android:textSize="20dp" />
+            android:text="@string/podz"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/nachsnar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Получить стартовое снаряжение"
-            android:textSize="20dp" />
+            android:text="@string/nachsnar"
+            android:textSize="20sp" />
     </LinearLayout>
 </FrameLayout>

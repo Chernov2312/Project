@@ -34,4 +34,23 @@
     <string name="smallbottle">Купить маленькую бутылку воды за 50</string>
     <string name="sredbottle">Купить флягу за 100</string>
     <string name="bigbottle">Купить бутыль с водой за 200</string>
+    <string name="podz">Пойти в подземелье</string>
+    <string name="nachsnar">Получить стартовое снаряжение</string>
+    <string name="city">Вы находитесь в городе</string>
+    <string name="returnedhome">Вернуться к дому</string>
+    <string name="go_gildia">Пойти в гильдию</string>
+    <string name="goshop">Пойти в магазин</string>
+    <string name="homefind">Обыскать дом</string>
+    <string name="goautside">Выйти на улицу</string>
+    <string name="supplies">Расходники</string>
+    <string name="yoursnar">Ваше снаряжение:</string>
+    <string name="monstxitpoints">Кол-во жизни у монстра:</string>
+    <string name="gonext">Пойди дальше</string>
+    <string name="attactmob">Атаковать</string>
+    <string name="youhave">У вас есть</string>
+    <string name="gofoodotdel">Пойти в отдел с продуктами</string>
+    <string name="goweaponotdel">Пойти в оружейний отдел</string>
+    <string name="songs">Звуки</string>
+    <string name="savegame">Сохранить игру</string>
+    <string name="loadgame">Загрузить игру</string>
 </resources>

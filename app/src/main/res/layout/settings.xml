@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
             android:checked="true"
-            android:text="Звуки"
+            android:text="@string/songs"
             android:textOff="OFF"
             android:textOn="ON"
             app:showText="true" />
@@ -26,13 +26,13 @@
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сохранить игру" />
+            android:text="@string/savegame" />
 
         <Button
             android:id="@+id/load"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Загрузить игру" />
+            android:text="@string/loadgame" />
 
     </LinearLayout>
     <Button
@@ -40,5 +40,5 @@
         android:id="@+id/return32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вернуться" />
+        android:text="@string/returned" />
 </FrameLayout>

@@ -8,19 +8,19 @@
         android:id="@+id/Return2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Вернуться"
-        android:textSize="20dp"/>
+        android:text="@string/returned"
+        android:textSize="20sp"/>
     <Button
         android:id="@+id/rasxodn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Расходники"
-        android:textSize="20dp"/>
+        android:text="@string/supplies"
+        android:textSize="20sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ваше снаряжение:"
-        android:textSize="20dp" />
+        android:text="@string/yoursnar"
+        android:textSize="20sp" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

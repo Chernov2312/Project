@@ -8,8 +8,8 @@
         android:id="@+id/moneyhave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="У вас есть"
-        android:textSize="20dp"
+        android:text="@string/youhave"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:background="@color/white"/>
     <LinearLayout
@@ -22,26 +22,26 @@
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Вернуться"/>
+            android:textSize="20sp"
+            android:text="@string/returned"/>
         <Button
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Персонаж"/>
+            android:textSize="20sp"
+            android:text="@string/person"/>
         <Button
             android:id="@+id/foodotdel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Пойти в отдел с продуктами"/>
+            android:textSize="20sp"
+            android:text="@string/gofoodotdel"/>
         <Button
             android:id="@+id/weaponotdel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Пойти в оружейний отдел"/>
+            android:textSize="20sp"
+            android:text="@string/goweaponotdel"/>
     </LinearLayout>
 
 </FrameLayout>
