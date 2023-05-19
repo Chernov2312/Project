@@ -94,4 +94,7 @@
     <string name="savesuccesfull">Сохранение успешно</string>
     <string name="yourarmoruppgrade">Ваша защита увеличена на </string>
     <string name="yourdamageuppgrade">Ваш урон увеличен на </string>
+    <string name="smallhill"> маленьких хилок</string>
+    <string name="sredhill"> средних хилок</string>
+    <string name="bighill"> больших хилок</string>
 </resources>

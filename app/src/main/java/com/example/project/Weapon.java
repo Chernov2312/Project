@@ -27,7 +27,7 @@ public class Weapon extends Character_Settings {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 hillrasx[0] += 1;
-                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[0] + " маленьких хилок", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[0] + getResources().getString(R.string.smallhill), Snackbar.LENGTH_SHORT).show();
                 binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
 
@@ -36,7 +36,7 @@ public class Weapon extends Character_Settings {
             if (getGolds() >= 100) {
                 setGolds(getGolds() - 100);
                 hillrasx[1] += 1;
-                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[1] + " средних хилок", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[1] + getResources().getString(R.string.sredhill), Snackbar.LENGTH_SHORT).show();
                 binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
@@ -44,7 +44,7 @@ public class Weapon extends Character_Settings {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 hillrasx[2] += 1;
-                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[2] + " больших хилок", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[2] + getResources().getString(R.string.bighill), Snackbar.LENGTH_SHORT).show();
                 binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
