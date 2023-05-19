@@ -8,13 +8,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Вы освободили город от постоянных атак монстров"
+        android:text="@string/wingame"
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
     <Button
         android:id="@+id/menu"
         android:layout_gravity="right|bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Меню"/>
+        android:text="@string/menu"/>
 </FrameLayout>
