@@ -146,7 +146,7 @@ public class Settings extends Character_Settings {
         setWaterr(Waterff);
         setHill(Hillff);
         setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(INVENTORYY_PREFERENCE, set)));
-        Snackbar.make(binding.load, "Последнее сохранение загруженно успешно", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(binding.load, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
         recreate();
     }
 
@@ -187,7 +187,7 @@ public class Settings extends Character_Settings {
         ed.putStringSet(INVENTORYY_PREFERENCE, set);
         ed.putBoolean(S_PREFERENCE, getS());
         ed.apply();
-        Snackbar.make(binding.save, "Сохранение успешно", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
     }
 
     public static boolean isMusic() {

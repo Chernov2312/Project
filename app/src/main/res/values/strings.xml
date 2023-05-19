@@ -86,4 +86,12 @@
     <string name="shield">Круглый щит </string>
     <string name="boots">Кожаные сапоги </string>
     <string name="nagr">Нагрудник из кольчуги </string>
+    <string name="loadsave">Последнее сохранение загруженно успешно</string>
+    <string name="nothing">Вы ничего не нашли</string>
+    <string name="money100">Вы нашли 100 монет</string>
+    <string name="money500">Вы нашли 500 монет и 3 больших пайка</string>
+    <string name="money5004">Вы нашли 500 монет,4 больших пайка и бутыль воды</string>
+    <string name="savesuccesfull">Сохранение успешно</string>
+    <string name="yourarmoruppgrade">Ваша защита увеличена на </string>
+    <string name="yourdamageuppgrade">Ваш урон увеличен на </string>
 </resources>

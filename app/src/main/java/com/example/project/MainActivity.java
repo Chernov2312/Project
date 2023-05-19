@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.load.setOnClickListener(v -> {
             load2();
-            Snackbar.make(binding.load, "Последнее сохранение загруженно успешно", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(binding.load, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
             game();
         });
         binding.play.setOnClickListener(v -> {

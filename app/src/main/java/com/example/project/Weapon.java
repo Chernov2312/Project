@@ -22,13 +22,13 @@ public class Weapon extends Character_Settings {
         setM(6);
         intent = new Intent(Weapon.this, MyService.class);
         startService(intent);
-        binding.moneyhave.setText("У вас: " + getGolds() + "$");
+        binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
         binding.smalbottlexit.setOnClickListener(v -> {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 hillrasx[0] += 1;
-                Snackbar.make(binding.shieldbuy, "У вас есть " + hillrasx[0] + " маленьких хилок", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[0] + " маленьких хилок", Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
 
         });
@@ -36,24 +36,24 @@ public class Weapon extends Character_Settings {
             if (getGolds() >= 100) {
                 setGolds(getGolds() - 100);
                 hillrasx[1] += 1;
-                Snackbar.make(binding.shieldbuy, "У вас есть " + hillrasx[1] + " средних хилок", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[1] + " средних хилок", Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.bigbottlexit.setOnClickListener(v -> {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 hillrasx[2] += 1;
-                Snackbar.make(binding.shieldbuy, "У вас есть " + hillrasx[2] + " больших хилок", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[2] + " больших хилок", Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.shieldbuy.setOnClickListener(v -> {
             if (getGolds() >= 250) {
                 setLvlshield(getLvlshield() + 1);
                 setBlockdamage(getBlockdamage() + 5);
-                Snackbar.make(binding.shieldbuy, "Ваша защита увеличена на " + 5, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.shieldbuy, getResources().getString(R.string.yourarmoruppgrade) + 5, Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.swordbuy.setOnClickListener(v -> {
@@ -61,8 +61,8 @@ public class Weapon extends Character_Settings {
                 setGolds(getGolds() - 300);
                 setLvlmech(getLvlmech() + 1);
                 setDamage(getDamage() + 15);
-                Snackbar.make(binding.swordbuy, "Ваш урон увеличен на " + 15, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.swordbuy, getResources().getString(R.string.yourdamageuppgrade) + 15, Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.clothescreate.setOnClickListener(v -> {
@@ -70,8 +70,8 @@ public class Weapon extends Character_Settings {
                 setGolds(getGolds() - 250);
                 setLvlarmor(getLvlarmor() + 1);
                 setBlockdamage(getBlockdamage() + 10);
-                Snackbar.make(binding.clothescreate, "Ваша защита увеличена на " + 10, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.clothescreate, getResources().getString(R.string.yourarmoruppgrade) + 10, Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.Return.setOnClickListener(v -> {
