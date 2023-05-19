@@ -38,7 +38,9 @@ public class BossFight extends AppCompatActivity {
                startActivity(i);
                finish();
            }
+            binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
         });
+        binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
         binding.person.setOnClickListener(v -> {
             MainActivity.setMenu(6);
             Intent i = new Intent(BossFight.this, Character_Settings.class);

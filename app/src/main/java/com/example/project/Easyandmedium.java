@@ -75,10 +75,12 @@ public class Easyandmedium extends Character_Settings {
             binding.gonext.setVisibility(View.VISIBLE);
             binding.Return.setVisibility(View.VISIBLE);
         }
+        binding.fightxitPoints.setText("Ваше здоровье: " + getXit_points());
         binding.attack.setOnClickListener(v -> {
             mob_xit_points -= getDamage();
             setXit_points((int) (getXit_points() - mob_damage * (1 - (float) getBlockdamage() / 100)));
             binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
+            binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
             if (getXit_points() <= 0) {
                 Intent i = new Intent(Easyandmedium.this, GameLose.class);
                 startActivity(i);
