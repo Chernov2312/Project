@@ -22,13 +22,13 @@ public class Weapon extends Character_Settings {
         setM(6);
         intent = new Intent(Weapon.this, MyService.class);
         startService(intent);
-        binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+        binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
         binding.smalbottlexit.setOnClickListener(v -> {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 hillrasx[0] += 1;
                 Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[0] + getResources().getString(R.string.smallhill), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
 
         });
@@ -37,7 +37,7 @@ public class Weapon extends Character_Settings {
                 setGolds(getGolds() - 100);
                 hillrasx[1] += 1;
                 Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[1] + getResources().getString(R.string.sredhill), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.bigbottlexit.setOnClickListener(v -> {
@@ -45,7 +45,7 @@ public class Weapon extends Character_Settings {
                 setGolds(getGolds() - 200);
                 hillrasx[2] += 1;
                 Snackbar.make(binding.shieldbuy, getResources().getString(R.string.youhave) + hillrasx[2] + getResources().getString(R.string.bighill), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.shieldbuy.setOnClickListener(v -> {
@@ -53,7 +53,7 @@ public class Weapon extends Character_Settings {
                 setLvlshield(getLvlshield() + 1);
                 setBlockdamage(getBlockdamage() + 5);
                 Snackbar.make(binding.shieldbuy, getResources().getString(R.string.yourarmoruppgrade) + 5, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.swordbuy.setOnClickListener(v -> {
@@ -62,7 +62,7 @@ public class Weapon extends Character_Settings {
                 setLvlmech(getLvlmech() + 1);
                 setDamage(getDamage() + 15);
                 Snackbar.make(binding.swordbuy, getResources().getString(R.string.yourdamageuppgrade) + 15, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.clothescreate.setOnClickListener(v -> {
@@ -71,7 +71,7 @@ public class Weapon extends Character_Settings {
                 setLvlarmor(getLvlarmor() + 1);
                 setBlockdamage(getBlockdamage() + 10);
                 Snackbar.make(binding.clothescreate, getResources().getString(R.string.yourarmoruppgrade) + 10, Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.Return.setOnClickListener(v -> {

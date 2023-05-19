@@ -21,7 +21,7 @@ public class Buyproduct extends Character_Settings {
         binding = FoodOtdelBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(6);
-        binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+        binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
         intent = new Intent(Buyproduct.this, MyService.class);
         startService(intent);
         binding.Return.setOnClickListener(v -> {
@@ -34,7 +34,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(getGolds() - 50);
                 foodd[0] += 1;
                 Snackbar.make(binding.smallfood, getResources().getString(R.string.youhave) + foodd[0] + getResources().getString(R.string.small), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
 
         });
@@ -43,7 +43,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(Character_Settings.getGolds() - 100);
                 foodd[1] += 1;
                 Snackbar.make(binding.sredfood, getResources().getString(R.string.youhave) + foodd[1] + getResources().getString(R.string.sred), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.bigfood.setOnClickListener(v -> {
@@ -51,7 +51,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(getGolds() - 200);
                 foodd[2] += 1;
                 Snackbar.make(binding.bigfood, getResources().getString(R.string.youhave) + foodd[2] + getResources().getString(R.string.big), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.smallwater.setOnClickListener(v -> {
@@ -59,7 +59,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(getGolds() - 50);
                 waterr[0] += 1;
                 Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[0] +getResources().getString(R.string.small), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.sredwater.setOnClickListener(v -> {
@@ -67,7 +67,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(getGolds() - 100);
                 waterr[1] += 1;
                 Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[1] + getResources().getString(R.string.sred), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         binding.bigwater.setOnClickListener(v -> {
@@ -75,7 +75,7 @@ public class Buyproduct extends Character_Settings {
                 setGolds(getGolds() - 200);
                 waterr[2] += 1;
                 Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[2] + getResources().getString(R.string.big), Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.dolar));
             }
         });
         setWaterr(waterr);

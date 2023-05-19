@@ -19,7 +19,7 @@ public class Shop extends Character_Settings {
         intent = new Intent(Shop.this, MyService.class);
         startService(intent);
         setMenu(4);
-        binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.$));
+        binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
         binding.person.setOnClickListener(v -> {
             Intent i = new Intent(Shop.this, Character_Settings.class);
             startActivity(i);

@@ -65,7 +65,7 @@
     <string name="wingame">Вы освободили город от постоянных атак монстров</string>
     <string name="menu">Меню</string>
     <string name="netv">Общая ценность: </string>
-    <string name="$"> $</string>
+    <string name="dolar"> $</string>
     <string name="maxnetvors2000"> Максимальное кол-во денег 2000$</string>
     <string name="maxnetvors5000"> Максимальное кол-во денег 5000$</string>
     <string name="maxnetvors10000"> Максимальное кол-во денег 10000$</string>
@@ -90,7 +90,7 @@
     <string name="nothing">Вы ничего не нашли</string>
     <string name="money100">Вы нашли 100 монет</string>
     <string name="money500">Вы нашли 500 монет и 3 больших пайка</string>
-    <string name="money5004">Вы нашли 500 монет,4 больших пайка и бутыль воды</string>
+    <string name="money5004">Вы нашли 500 монет, 4 больших пайка и бутыль воды</string>
     <string name="savesuccesfull">Сохранение успешно</string>
     <string name="yourarmoruppgrade">Ваша защита увеличена на </string>
     <string name="yourdamageuppgrade">Ваш урон увеличен на </string>

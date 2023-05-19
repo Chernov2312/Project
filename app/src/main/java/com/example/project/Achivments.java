@@ -26,7 +26,7 @@ public class Achivments extends Character_Settings{
         binding.earlykiller.setText(getResources().getString(R.string.dontopen));
         binding.middlekiller.setText(getResources().getString(R.string.dontopen));
         binding.prokiller.setText(getResources().getString(R.string.dontopen));
-        binding.netvors.setText( getResources().getString(R.string.netv) + getTotal_money() + getResources().getString(R.string.$));
+        binding.netvors.setText( getResources().getString(R.string.netv) + getTotal_money() + getResources().getString(R.string.dolar));
         if(getMaxmoney() > 2000) binding.minmaxnet.setText(getResources().getString(R.string.maxnetvors2000));
         if(getMaxmoney() > 5000) binding.middlemaxnet.setText(getResources().getString(R.string.maxnetvors5000));
         if(getMaxmoney() > 2000) binding.goldnet.setText(getResources().getString(R.string.maxnetvors10000));
