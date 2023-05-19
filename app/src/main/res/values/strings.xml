@@ -13,12 +13,12 @@
     <string name="person">Персонаж</string>
     <string name="new_game">Новая игра</string>
     <string name="goplay">Продолжить игру</string>
-    <string name="boss_xp_1000">BOSS XP: 1000</string>
+    <string name="boss_xp_1000">BOSS XP: </string>
     <string name="attact">Атаковать</string>
     <string name="catacomb">Вы находитесь у входа в катакомбы</string>
     <string name="go_boss">Пойти к боссу</string>
     <string name="easy_medium">Пойти в обычный лабиринт</string>
-    <string name="money">Деньги: 0</string>
+    <string name="money">Деньги: </string>
     <string name="level">Уровень: 1</string>
     <string name="xit_points">Кол-во жизни:</string>
     <string name="dehidration">Голод:</string>
@@ -44,10 +44,10 @@
     <string name="goautside">Выйти на улицу</string>
     <string name="supplies">Расходники</string>
     <string name="yoursnar">Ваше снаряжение:</string>
-    <string name="monstxitpoints">Кол-во жизни у монстра:</string>
+    <string name="monstxitpoints">Кол-во жизни у монстра: </string>
     <string name="gonext">Пойди дальше</string>
     <string name="attactmob">Атаковать</string>
-    <string name="youhave">У вас есть</string>
+    <string name="youhave">У вас есть </string>
     <string name="gofoodotdel">Пойти в отдел с продуктами</string>
     <string name="goweaponotdel">Пойти в оружейний отдел</string>
     <string name="songs">Звуки</string>
@@ -73,4 +73,17 @@
     <string name="killed50mobs"> Убито 50 монстров</string>
     <string name="killed100mobs"> Убито 100 монстров</string>
     <string name="dontopen">Не открыто</string>
+    <string name="your_xit_points">Ваше здоровье: </string>
+    <string name="youhavecrat">У вас: </string>
+    <string name="small"> маленьких</string>
+    <string name="sred"> средних</string>
+    <string name="big"> больших</string>
+    <string name="winmonster"> Вы победили этого монстра</string>
+    <string name="yoursnaruppgrade">Ваше снаряжение улучшенно</string>
+    <string name="lvl"> lvl</string>
+    <string name="sword">Короткий меч </string>
+    <string name="magagrt">Магический артефакт </string>
+    <string name="shield">Круглый щит </string>
+    <string name="boots">Кожаные сапоги </string>
+    <string name="nagr">Нагрудник из кольчуги </string>
 </resources>

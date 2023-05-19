@@ -20,14 +20,14 @@ public class BossFight extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = BossBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.bossXp.setText("BOSS XP: " + BossXitpoints);
+        binding.bossXp.setText(getResources().getString(R.string.boss_xp_1000) + BossXitpoints);
         setM(11);
         intent = new Intent(BossFight.this, MyService.class);
         startService(intent);
         binding.attack.setOnClickListener(v -> {
            BossXitpoints -= Character_Settings.getDamage();
            Character_Settings.setXit_points((int) (Character_Settings.getXit_points() - 700 * (1 - (float)Character_Settings.getBlockdamage()/100)));
-           binding.bossXp.setText("BOSS XP: " + BossXitpoints);
+           binding.bossXp.setText(getResources().getString(R.string.boss_xp_1000) + BossXitpoints);
            if(Character_Settings.getXit_points() < 0){
                Intent i = new Intent(BossFight.this, GameLose.class);
                startActivity(i);
@@ -38,9 +38,9 @@ public class BossFight extends AppCompatActivity {
                startActivity(i);
                finish();
            }
-            binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
+            binding.fightxitPoints.setText(getResources().getString(R.string.your_xit_points) + Character_Settings.getXit_points());
         });
-        binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
+        binding.fightxitPoints.setText(getResources().getString(R.string.your_xit_points) + Character_Settings.getXit_points());
         binding.person.setOnClickListener(v -> {
             MainActivity.setMenu(6);
             Intent i = new Intent(BossFight.this, Character_Settings.class);

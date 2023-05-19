@@ -68,19 +68,19 @@ public class Easyandmedium extends Character_Settings {
                 setM(10);
                 break;
         }
-        binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
+        binding.mob.setText(getResources().getString(R.string.monstxitpoints) + mob_xit_points);
         if(mob_xit_points < -1 || mob_xit_points == 0){
-            binding.mob.setText("Вы победили этого монстра");
+            binding.mob.setText(getResources().getString(R.string.winmonster));
             binding.attack.setVisibility(View.INVISIBLE);
             binding.gonext.setVisibility(View.VISIBLE);
             binding.Return.setVisibility(View.VISIBLE);
         }
-        binding.fightxitPoints.setText("Ваше здоровье: " + getXit_points());
+        binding.fightxitPoints.setText(getResources().getString(R.string.your_xit_points) + getXit_points());
         binding.attack.setOnClickListener(v -> {
             mob_xit_points -= getDamage();
             setXit_points((int) (getXit_points() - mob_damage * (1 - (float) getBlockdamage() / 100)));
-            binding.mob.setText("Кол-во жизни у монстра: " + mob_xit_points);
-            binding.fightxitPoints.setText("Ваше здоровье: " + Character_Settings.getXit_points());
+            binding.mob.setText(getResources().getString(R.string.monstxitpoints) + mob_xit_points);
+            binding.fightxitPoints.setText(getResources().getString(R.string.your_xit_points) + Character_Settings.getXit_points());
             if (getXit_points() <= 0) {
                 Intent i = new Intent(Easyandmedium.this, GameLose.class);
                 startActivity(i);
@@ -89,27 +89,27 @@ public class Easyandmedium extends Character_Settings {
             ArrayList<String> strings = getInventoryy();
             if (mob_xit_points <= 0) {
                 setKilledmobs(getKilledmobs() + 1);
-                binding.mob.setText("Вы победили этого монстра");
+                binding.mob.setText(getResources().getString(R.string.winmonster));
                 binding.attack.setVisibility(View.INVISIBLE);
-                Snackbar.make(binding.attack, "Ваше снаряжение улучшенно", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(binding.attack, getResources().getString(R.string.yoursnaruppgrade), Snackbar.LENGTH_SHORT).show();
                 int y = Home.Randomlut();
                 if (y == 0) {
                     setLvlmech(getLvlmech() + 1);
                     setDamage(getDamage() + 15);
-                    strings.set(0, "Короткий меч " + lvlmech + "lvl");
+                    strings.set(0, getResources().getString(R.string.sword) + lvlmech + getResources().getString(R.string.lvl));
                 } else if (y == 1) {
                     setLvlmag(getLvlmag() + 1);
                     setDamage(getDamage() + 10);
-                    strings.set(4, "Магический артефакт " + getLvlmag() + "lvl");
+                    strings.set(4, getResources().getString(R.string.magagrt) + getLvlmag() + getResources().getString(R.string.lvl));
                 } else if (y == 2) {
                     setBlockdamage(getBlockdamage() + 5);
                     setLvlshield(getLvlshield() + 1);
-                    strings.set(3, "Круглый щит " + getLvlshield() + "lvl");
+                    strings.set(3, getResources().getString(R.string.shield) + getLvlshield() + getResources().getString(R.string.lvl));
                 } else if (y == 3) {
                     setLvlarmor(getLvlarmor() + 1);
                     setBlockdamage(getBlockdamage() + 10);
-                    strings.set(2, "Кожаные сапоги " + getLvlarmor() + "lvl");
-                    strings.set(1, "Нагрудник из кольчуги " + getLvlarmor() + "lvl");
+                    strings.set(2, getResources().getString(R.string.boots) + getLvlarmor() + getResources().getString(R.string.lvl));
+                    strings.set(1, getResources().getString(R.string.nagr) + getLvlarmor() + getResources().getString(R.string.lvl));
                 }
                 setLevel(getLevel() + 1);
                 setDamage(getDamage() + 15);

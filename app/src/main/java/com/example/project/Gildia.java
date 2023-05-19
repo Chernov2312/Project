@@ -39,11 +39,11 @@ public class Gildia extends Character_Settings{
             k = false;
             binding.nachsnar.setVisibility(View.INVISIBLE);
             inventory2.remove(0);
-            inventory2.add("Короткий меч 1lvl");
-            inventory2.add("Нагрудник из кольчуги 1lvl");
-            inventory2.add("Кожаные сапоги 1lvl");
-            inventory2.add("Круглый щит 1lvl");
-            inventory2.add("Магический артефакт 1lvl");
+            inventory2.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            inventory2.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            inventory2.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            inventory2.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+            inventory2.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
             setDamage(getDamage() + 50);
             setBlockdamage(getBlockdamage() + 15);
             setInventoryy(inventory2);

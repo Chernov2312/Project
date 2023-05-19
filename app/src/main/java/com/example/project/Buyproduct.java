@@ -21,7 +21,7 @@ public class Buyproduct extends Character_Settings {
         binding = FoodOtdelBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setM(6);
-        binding.moneyhave.setText("У вас: " + getGolds() + "$");
+        binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
         intent = new Intent(Buyproduct.this, MyService.class);
         startService(intent);
         binding.Return.setOnClickListener(v -> {
@@ -33,8 +33,8 @@ public class Buyproduct extends Character_Settings {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 foodd[0] += 1;
-                Snackbar.make(binding.smallfood, "У вас есть " + foodd[0] + " маленьких пайка", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.smallfood, getResources().getString(R.string.youhave) + foodd[0] + getResources().getString(R.string.small), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
 
         });
@@ -42,40 +42,40 @@ public class Buyproduct extends Character_Settings {
             if (getGolds() >= 100) {
                 setGolds(Character_Settings.getGolds() - 100);
                 foodd[1] += 1;
-                Snackbar.make(binding.sredfood, "У вас есть " + foodd[1] + " средних пайков", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.sredfood, getResources().getString(R.string.youhave) + foodd[1] + getResources().getString(R.string.sred), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.bigfood.setOnClickListener(v -> {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 foodd[2] += 1;
-                Snackbar.make(binding.bigfood, "У вас есть " + foodd[2] + " больших пайков", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.bigfood, getResources().getString(R.string.youhave) + foodd[2] + getResources().getString(R.string.big), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.smallwater.setOnClickListener(v -> {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
                 waterr[0] += 1;
-                Snackbar.make(binding.smallwater, "У вас есть " + waterr[0] + " маленьких бутылок с водой", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[0] +getResources().getString(R.string.small), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.sredwater.setOnClickListener(v -> {
             if (getGolds() >= 100) {
                 setGolds(getGolds() - 100);
                 waterr[1] += 1;
-                Snackbar.make(binding.smallwater, "У вас есть " + waterr[1] + " фляг", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[1] + getResources().getString(R.string.sred), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
         });
         binding.bigwater.setOnClickListener(v -> {
             if (getGolds() >= 200) {
                 setGolds(getGolds() - 200);
                 waterr[2] += 1;
-                Snackbar.make(binding.smallwater, "У вас есть " + waterr[2] + " бутылей с водой", Snackbar.LENGTH_SHORT).show();
-                binding.moneyhave.setText("У вас: " + getGolds() + "$");
+                Snackbar.make(binding.smallwater, getResources().getString(R.string.youhave) + waterr[2] + getResources().getString(R.string.big), Snackbar.LENGTH_SHORT).show();
+                binding.moneyhave.setText(getResources().getString(R.string.youhavecrat) + getGolds() + getResources().getString(R.string.$));
             }
         });
         setWaterr(waterr);
