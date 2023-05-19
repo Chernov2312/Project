@@ -1,10 +1,14 @@
 package com.example.project;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.project.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
