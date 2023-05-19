@@ -18,25 +18,25 @@
             android:id="@+id/exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Выход"
-            android:textSize="20dp" />
+            android:text="@string/exit"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Персонаж"
-            android:textSize="20dp" />
+            android:text="@string/person"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Новая игра"
-            android:textSize="20dp" />
+            android:text="@string/new_game"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/load"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Продолжить игру"
-            android:textSize="20dp" />
+            android:text="@string/goplay"
+            android:textSize="20sp" />
     </LinearLayout>
 </RelativeLayout>

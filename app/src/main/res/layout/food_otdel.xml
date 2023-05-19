@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:text="У вас есть"
+        android:text=""
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,29 +32,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:text="Вернуться"
-                android:textSize="15dp" />
+                android:text="@string/returned"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/smallfood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить маленький паёк за 50"
-                android:textSize="20dp" />
+                android:text="@string/small_paek"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/sredfood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить средний паёк за 100"
-                android:textSize="20dp" />
+                android:text="@string/sred_paek"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/bigfood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить большой паёк за 200"
-                android:textSize="20dp" />
+                android:text="@string/big_paek"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,22 +69,22 @@
                 android:id="@+id/smallwater"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить маленькую бутылку воды за 50"
-                android:textSize="20dp" />
+                android:text="@string/smallbottle"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/sredwater"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить флягу за 100"
-                android:textSize="20dp" />
+                android:text="@string/sredbottle"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/bigwater"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Купить бутыль с водой за 200"
-                android:textSize="20dp" />
+                android:text="@string/bigbottle"
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

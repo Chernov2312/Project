@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Бесконечное Подземелье: Путь героя</string>
+    <string name="your_achivments">Ваши достижения</string>
+    <string name="returned">Вернуться</string>
+    <string name="max_netvors">Максимальный нетворс 10000$</string>
+    <string name="maxmaxnetvors">Максимальный нетворс 5000$</string>
+    <string name="killedmobsmin">монстров убито 10</string>
+    <string name="sredkilledmobs">монстров убито 50</string>
+    <string name="maxkilledmobs">монстров убито 100</string>
+    <string name="obsnetvors">Всего нетворса:</string>
+    <string name="max_maxnetvors">Максимальный нетворс 2000$</string>
+    <string name="exit">Выход</string>
+    <string name="person">Персонаж</string>
+    <string name="new_game">Новая игра</string>
+    <string name="goplay">Продолжить игру</string>
+    <string name="boss_xp_1000">BOSS XP: 1000</string>
+    <string name="attact">Атаковать</string>
+    <string name="catacomb">Вы находитесь у входа в катакомбы</string>
+    <string name="go_boss">Пойти к боссу</string>
+    <string name="easy_medium">Пойти в обычный лабиринт</string>
+    <string name="money">Деньги: 0</string>
+    <string name="level">Уровень: 1</string>
+    <string name="xit_points">Кол-во жизни:</string>
+    <string name="dehidration">Голод:</string>
+    <string name="determination">Жажда:</string>
+    <string name="settings">Настройки</string>
+    <string name="inventory">Инвентарь</string>
+    <string name="achivments">Достижения</string>
+    <string name="returnedmenu">Вернуться в меню</string>
+    <string name="you_die">Вы погибли</string>
+    <string name="small_paek">Купить маленький паёк за 50</string>
+    <string name="sred_paek">Купить средний паёк за 100</string>
+    <string name="big_paek">Купить большой паёк за 200</string>
+    <string name="smallbottle">Купить маленькую бутылку воды за 50</string>
+    <string name="sredbottle">Купить флягу за 100</string>
+    <string name="bigbottle">Купить бутыль с водой за 200</string>
 </resources>

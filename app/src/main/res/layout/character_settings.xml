@@ -18,22 +18,22 @@
             android:id="@+id/gold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Деньги: 0"
+            android:text="@string/money"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <TextView
             android:id="@+id/level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Уровень: 1"
+            android:text="@string/level"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Кол-во жизни:"
+            android:text="@string/xit_points"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <ProgressBar
             android:id="@+id/xit_points"
             style="?android:attr/progressBarStyleHorizontal"
@@ -42,9 +42,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Голод: "
+            android:text="@string/dehidration"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <ProgressBar
             android:id="@+id/Food"
             style="?android:attr/progressBarStyleHorizontal"
@@ -53,9 +53,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Жажда: "
+            android:text="@string/determination"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
         <ProgressBar
             android:id="@+id/water"
             style="?android:attr/progressBarStyleHorizontal"
@@ -72,20 +72,20 @@
             android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Настройки"
-            android:textSize="20dp"/>
+            android:text="@string/settings"
+            android:textSize="20sp"/>
         <Button
             android:id="@+id/Inventory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Инвентарь"
-            android:textSize="20dp"/>
+            android:text="@string/inventory"
+            android:textSize="20sp"/>
         <Button
             android:id="@+id/achivments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Достижения"
-            android:textSize="20dp"/>
+            android:text="@string/achivments"
+            android:textSize="20sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -98,7 +98,7 @@
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Вернуться"
-            android:textSize="20dp" />
+            android:text="@string/returned"
+            android:textSize="20sp" />
     </LinearLayout>
 </RelativeLayout>
