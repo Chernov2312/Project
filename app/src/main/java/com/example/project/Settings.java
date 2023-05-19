@@ -20,7 +20,7 @@ import java.util.Set;
 
 public class Settings extends Character_Settings {
     SettingsBinding binding;
-    SharedPreferences sharedPreferences;
+    static SharedPreferences sharedPreferences;
     public final static String GOLDS_PREFERENCE = "golds";
     public final static String LEVEL_PREFERENCE = "level";
     public final static String XIT_POINTS_PREFERENCE = "xitpoints";
@@ -40,7 +40,7 @@ public class Settings extends Character_Settings {
     public final static String BOSS_XIT_POINTS = "boss_xit_points";
     public final static String MENU_PREFERENCE = "menu";
     public static final String S_PREFERENCE = "s";
-    private final static String INVENTORYY_PREFERENCE = "inventory";
+    public final static String INVENTORYY_PREFERENCE = "inventory";
     public final static String FOODF1_PREFERENCE = "foodf1";
     public final static String FOODF2_PREFERENCE = "foodf2";
     public final static String FOODF3_PREFERENCE = "foodf3";
@@ -54,11 +54,11 @@ public class Settings extends Character_Settings {
     public final static String MOB = "mob";
     public final static String MOB_DAMAGE = "mob_damage";
     public final static String MUSIC = "music";
-    private int[] Foodff = {0, 0, 0};
-    private int[] Waterff = {0, 0, 0};
-    private int[] Hillff = {0, 0, 0};
-    private static boolean music = true;
-    private Set<String> set = new HashSet<>(getInventoryy());
+    public static int[] Foodff = {0, 0, 0};
+    public static int[] Waterff = {0, 0, 0};
+    public static int[] Hillff = {0, 0, 0};
+    public static boolean music = true;
+    public static Set<String> set = new HashSet<>(getInventoryy());
     Intent intent;
 
     @Override
@@ -108,7 +108,7 @@ public class Settings extends Character_Settings {
         stopService(intent);
     }
 
-    private void loadPreference() {
+    public void loadPreference() {
         sharedPreferences = getPreferences(MODE_PRIVATE);
         setGolds(sharedPreferences.getInt(GOLDS_PREFERENCE, getGolds()));
         setLevel(sharedPreferences.getInt(LEVEL_PREFERENCE, getLevel()));
