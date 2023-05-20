@@ -10,33 +10,45 @@
         android:layout_gravity="bottom"
         android:orientation="vertical">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:layout_gravity="right"
             android:text="@string/returned"
             android:textSize="20sp" />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:layout_gravity="right"
             android:textSize="20sp"
             android:text="@string/person"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/podz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:layout_gravity="right"
             android:text="@string/podz"
             android:textSize="20sp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nachsnar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:layout_gravity="right"
             android:text="@string/nachsnar"
             android:textSize="20sp" />
