@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public static int[] Foodff = {0, 0, 0};
     public static int[] Waterff = {0, 0, 0};
     public static int[] Hillff = {0, 0, 0};
+    private static ArrayList<String> strings = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -218,5 +219,13 @@ public class MainActivity extends AppCompatActivity {
         Character_Settings.setHill(Hillff);
         Character_Settings.setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(Settings.INVENTORYY_PREFERENCE, set)));
         Snackbar.make(binding.save, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
+        if (Character_Settings.getDamage() != 20) {
+            strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
+            Character_Settings.setInventoryy(strings);
+        }
     }
 }

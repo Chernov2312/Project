@@ -57,7 +57,7 @@ public class Settings extends Character_Settings {
     public static int[] Waterff = {0, 0, 0};
     public static int[] Hillff = {0, 0, 0};
     public static boolean music = true;
-    public static ArrayList<String>  strings= new ArrayList<>();
+    private static ArrayList<String> strings = new ArrayList<>();
     Intent intent;
 
     @Override
@@ -146,11 +146,14 @@ public class Settings extends Character_Settings {
         music = sharedPreferences.getBoolean(MUSIC, music);
         setWaterr(Waterff);
         setHill(Hillff);
-        strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
-        strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
-        strings.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
-        strings.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
-        strings.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
+        if (Character_Settings.getDamage() != 20) {
+            strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+            strings.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
+            setInventoryy(strings);
+        }
     }
 
     private void savePreference() {
@@ -191,7 +194,6 @@ public class Settings extends Character_Settings {
         ed.apply();
         Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
     }
-
 
 
     public static boolean isMusic() {
