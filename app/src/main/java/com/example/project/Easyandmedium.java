@@ -148,6 +148,8 @@ public class Easyandmedium extends Character_Settings {
         });
         binding.gonext.setOnClickListener(v -> {
             mob_xit_points = -1;
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             recreate();
         });
     }

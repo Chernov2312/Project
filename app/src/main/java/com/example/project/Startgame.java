@@ -22,8 +22,8 @@ public class Startgame extends AppCompatActivity {
         intent = new Intent(Startgame.this, MyService.class);
         startService(intent);
         binding.goHome.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Startgame.this, Home.class);
             startActivity(i);
             finish();
@@ -35,8 +35,8 @@ public class Startgame extends AppCompatActivity {
             finish();
         });
         binding.gocity.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Startgame.this, City.class);
             startActivity(i);
             finish();

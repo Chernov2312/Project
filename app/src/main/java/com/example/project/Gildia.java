@@ -23,6 +23,8 @@ public class Gildia extends Character_Settings{
         intent = new Intent(Gildia.this, MyService.class);
         startService(intent);
         binding.Return.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Gildia.this, City.class);
             startActivity(i);
         });
@@ -47,6 +49,8 @@ public class Gildia extends Character_Settings{
             setBlockdamage(getBlockdamage() + 15);
         });
         binding.podz.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Gildia.this, Catacomb.class);
             startActivity(i);
             finish();

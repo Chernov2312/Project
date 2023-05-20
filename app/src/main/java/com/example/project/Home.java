@@ -24,8 +24,8 @@ public class Home extends Character_Settings {
         intent = new Intent(Home.this, MyService.class);
         startService(intent);
         binding.Return3.setOnClickListener(v -> {
-            setWater(Character_Settings.getWater() - 2);
-            setWater(Character_Settings.getWater() - 5);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             setFood(Character_Settings.getFood() - 1);
             Intent i = new Intent(Home.this, Startgame.class);
             startActivity(i);
@@ -57,12 +57,10 @@ public class Home extends Character_Settings {
                 foodd[2] += 3;
                 waterd[2] += 1;
             }
-            setWater(getWater() - 2);
-            setFood(getFood() - 1);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             setFoodd(foodd);
             setWaterr(waterd);
-            setWater(getWater() - 5);
-            setFood(getFood() - 1);
 
             boxcheked = 1;
             binding.box.setVisibility(View.INVISIBLE);

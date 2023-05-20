@@ -28,20 +28,22 @@ public class City extends AppCompatActivity {
             finish();
         });
         binding.Return.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(City.this, Startgame.class);
             startActivity(i);
             finish();
         });
         binding.magazin.setOnClickListener(v -> {
-            Character_Settings.setWater(Character_Settings.getWater() - 2);
-            Character_Settings.setFood(Character_Settings.getFood() - 1);
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(City.this, Shop.class);
             startActivity(i);
             finish();
         });
         binding.gild.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(City.this, Gildia.class);
             startActivity(i);
             finish();

@@ -18,16 +18,22 @@ public class Catacomb extends MainActivity{
         intent = new Intent(Catacomb.this, MyService.class);
         startService(intent);
         binding.return4.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Catacomb.this, Gildia.class);
             startActivity(i);
             finish();
         });
         binding.easyandmedium.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Catacomb.this, Easyandmedium.class);
             startActivity(i);
             finish();
         });
         binding.Boss.setOnClickListener(v -> {
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
             Intent i = new Intent(Catacomb.this, BossFight.class);
             startActivity(i);
             finish();

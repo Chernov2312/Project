@@ -31,6 +31,8 @@ public class Shop extends Character_Settings {
             Intent i = new Intent(Shop.this, City.class);
             startActivity(i);
             finish();
+            Character_Settings.setWater(Character_Settings.getWater() - 4);
+            Character_Settings.setFood(Character_Settings.getFood() - 2);
         });
         binding.foodotdel.setOnClickListener(v -> {
             Intent i = new Intent(Shop.this, Buyproduct.class);
