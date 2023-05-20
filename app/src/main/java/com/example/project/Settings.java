@@ -66,6 +66,7 @@ public class Settings extends Character_Settings {
         super.onCreate(savedInstanceState);
         binding = SettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        sharedPreferences = getPreferences(MODE_PRIVATE);
         binding.save.setOnClickListener(v -> {
             savePreference();
         });
@@ -75,6 +76,8 @@ public class Settings extends Character_Settings {
         startService(intent);
         binding.load.setOnClickListener(v -> {
             loadPreference();
+            Snackbar.make(binding.load, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
+            recreate();
         });
         binding.return32.setOnClickListener(v -> {
             Intent i = new Intent(Settings.this, Character_Settings.class);
@@ -146,8 +149,6 @@ public class Settings extends Character_Settings {
         setWaterr(Waterff);
         setHill(Hillff);
         setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(INVENTORYY_PREFERENCE, set)));
-        Snackbar.make(binding.load, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
-        recreate();
     }
 
     private void savePreference() {
@@ -188,6 +189,10 @@ public class Settings extends Character_Settings {
         ed.putBoolean(S_PREFERENCE, getS());
         ed.apply();
         Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
+    }
+
+    public static SharedPreferences getSharedPreferences() {
+        return sharedPreferences;
     }
 
     public static boolean isMusic() {

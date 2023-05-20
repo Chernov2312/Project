@@ -1,55 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/medium">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/easy"
+            android:id="@+id/background"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/returned"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/gonext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gonext"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attactmob"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/fightxit_points"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="30sp"
-        android:textColor="@color/white"/>
-    <TextView
-        android:id="@+id/mob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/monstxitpoints"
-        android:textColor="@color/white"
-        android:textSize="30sp"/></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="right|bottom">
-        <Button
-        android:id="@+id/Return"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/returned"
-        android:textSize="25sp"/>
-        <Button
-        android:id="@+id/gonext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gonext"
-        android:textSize="20sp"/>
-        <Button
-            android:id="@+id/attack"
-            android:layout_width="wrap_content"
+
+        <TextView
+            android:gravity="right"
+            android:id="@+id/fightxit_points"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/attactmob"
-            android:textSize="25sp"/>
-        <Button
-            android:id="@+id/person"
-            android:layout_width="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/mob"
+            android:gravity="right"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/person"
-            android:textSize="25sp"/>
+            android:text="@string/monstxitpoints"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
     </LinearLayout>
 </FrameLayout>

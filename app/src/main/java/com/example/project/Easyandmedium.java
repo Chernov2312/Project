@@ -158,6 +158,28 @@ public class Easyandmedium extends Character_Settings {
         stopService(intent);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        switch (mob) {
+            case 0:
+                binding.background.setBackgroundResource(R.drawable.hard);
+                setM(10);
+                break;
+            case 1:
+                binding.background.setBackgroundResource(R.drawable.easy);
+                setM(9);
+                break;
+            case 2:
+                binding.background.setBackgroundResource(R.drawable.medium);
+                setM(9);
+                break;
+            case 3:
+                binding.background.setBackgroundResource(R.drawable.hard2);
+                setM(10);
+                break;}
+    }
+
     public static int getMob_xit_points() {
         return mob_xit_points;
     }
