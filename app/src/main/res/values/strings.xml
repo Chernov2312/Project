@@ -13,7 +13,7 @@
     <string name="person">Персонаж</string>
     <string name="new_game">Новая игра</string>
     <string name="goplay">Продолжить игру</string>
-    <string name="goloadplay">Загрузить сохранение</string>
+    <string name="goloadplay">Загрузить сохраненение</string>
     <string name="boss_xp_1000">Здоровье босса: </string>
     <string name="attact">Атаковать</string>
     <string name="catacomb">Вы находитесь у входа в катакомбы</string>
@@ -21,7 +21,7 @@
     <string name="easy_medium">Пойти в обычный лабиринт</string>
     <string name="money">Деньги: </string>
     <string name="level">Уровень: 1</string>
-    <string name="xit_points">Кол-во жизни:</string>
+    <string name="xit_points">Кол-во жизни: </string>
     <string name="dehidration">Голод:</string>
     <string name="determination">Жажда:</string>
     <string name="settings">Настройки</string>
