@@ -107,4 +107,5 @@
     <string name="smallfoods"> Маленьких пайков: </string>
     <string name="sredfoods"> Средних пайков: </string>
     <string name="bigfoods"> Больших пайков: </string>
+    <string name="backtomenu">Выйти в меню</string>
 </resources>

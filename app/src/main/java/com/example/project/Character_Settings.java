@@ -60,6 +60,11 @@ public class Character_Settings extends MainActivity {
         startService(intent);
         setInventory(0);
         if(Maxmoney < golds) Maxmoney = golds;
+        binding.Returnmenu.setOnClickListener(v -> {
+            Intent i = new Intent(Character_Settings.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        });
         binding.Return.setOnClickListener(v -> {
             if (getMenu() == 0) {
                 Intent i = new Intent(Character_Settings.this, MainActivity.class);
