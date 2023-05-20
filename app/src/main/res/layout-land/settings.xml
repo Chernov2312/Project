@@ -22,20 +22,20 @@
             android:textOn="ON"
             app:showText="true" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/savegame" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/load"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/loadgame" />
 
     </LinearLayout>
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_gravity="bottom|right"
         android:id="@+id/return32"
         android:layout_width="wrap_content"
