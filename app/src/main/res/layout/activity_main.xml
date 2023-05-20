@@ -22,6 +22,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_color"
             android:text="@string/exit"
+            android:textColor="@color/black"
             android:textSize="20sp" />
         <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="5dp"
@@ -30,12 +31,14 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_color"
             android:text="@string/person"
+            android:textColor="@color/black"
             android:textSize="20sp" />
         <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="5dp"
             android:id="@+id/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:background="@drawable/button_color"
             android:text="@string/new_game"
             android:textSize="20sp" />
@@ -43,6 +46,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_color"
             android:id="@+id/load"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/goplay"
