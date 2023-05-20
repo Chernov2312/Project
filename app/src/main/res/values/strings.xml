@@ -21,9 +21,9 @@
     <string name="easy_medium">Пойти в обычный лабиринт</string>
     <string name="money">Деньги: </string>
     <string name="level">Уровень: 1</string>
-    <string name="xit_points">Кол-во жизни: </string>
-    <string name="dehidration">Голод:</string>
-    <string name="determination">Жажда:</string>
+    <string name="xit_points"> Кол-во жизни: </string>
+    <string name="dehidration"> Голод:</string>
+    <string name="determination"> Жажда:</string>
     <string name="settings">Настройки</string>
     <string name="inventory">Инвентарь</string>
     <string name="achivments">Достижения</string>
@@ -101,4 +101,10 @@
     <string name="moneynow"> Деньги: </string>
     <string name="levelnow"> Уровень: </string>
     <string name="played"> Играть</string>
+    <string name="bigbottles"> Больших бутылок: </string>
+    <string name="flyg"> Фляг: </string>
+    <string name="smallbottles"> Маленьких бутылок: </string>
+    <string name="smallfoods"> Маленьких пайков: </string>
+    <string name="sredfoods"> Средних пайков: </string>
+    <string name="bigfoods"> Больших пайков: </string>
 </resources>

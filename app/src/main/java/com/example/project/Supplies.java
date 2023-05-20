@@ -46,47 +46,47 @@ public class Supplies extends Character_Settings {
                 if (position == 0 && foodr[0] != 0) {
                     setFood(getFood() + 30);
                     foodr[0] -= 1;
-                    rasxodn2[0] = "Маленький пайков: " + foodr[0];
+                    rasxodn2[0] = getResources().getString(R.string.smallfoods) + foodr[0];
                 } else if (position == 1 && foodr[1] != 0) {
                     setFood(getFood() + 50);
                     foodr[1] -= 1;
-                    rasxodn2[1] = "Средних пайков: " + foodr[1];
+                    rasxodn2[1] = getResources().getString(R.string.sredfoods) + foodr[1];
                 } else if (position == 2 && foodr[2] != 0) {
                     setFood(getFood() + 80);
                     foodr[2] -= 1;
-                    rasxodn2[2] = "Больших пайков: " + foodr[2];
+                    rasxodn2[2] = getResources().getString(R.string.bigfoods) + foodr[2];
                 }
                 else if (position == 3 && waterf[0] != 0) {
                     setWater(getWater() + 30);
                     waterf[0] -= 1;
-                    rasxodn2[3] = "Маленьких бутылок: " + waterf[0];
+                    rasxodn2[3] = getResources().getString(R.string.smallbottles) + waterf[0];
                 }
                 else if (position == 4 && waterf[1] != 0) {
                     setWater(getWater() + 50);
                     waterf[1] -= 1;
-                    rasxodn2[4] = "Фляг: " + waterf[1];
+                    rasxodn2[4] = getResources().getString(R.string.flyg) + waterf[1];
                 }
                 else if (position == 5 && waterf[2] != 0) {
                     setWater(getWater() + 80);
                     waterf[2] -= 1;
-                    rasxodn2[5] = "Больших бутылок: " + waterf[2];
+                    rasxodn2[5] = getResources().getString(R.string.bigbottles) + waterf[2];
                 }
                 else if (position == 6 && hillrasx[0] != 0) {
                     setXit_points(getXit_points() + 10);
                     hillrasx[0] -= 1;
-                    rasxodn2[6] = "Маленьких хилок: " + hillrasx[0];
+                    rasxodn2[6] = getResources().getString(R.string.smallhill) + hillrasx[0];
                 }
                 else if (position == 7 && hillrasx[1] != 0) {
                     setXit_points(getXit_points() + 20);
                     hillrasx[1] -= 1;
-                    rasxodn2[7] = "Средних хилок: " + hillrasx[1];
+                    rasxodn2[7] = getResources().getString(R.string.sredhill) + hillrasx[1];
                 }
                 else if (position == 8 && hillrasx[2] != 0) {
                     setXit_points(getXit_points() + 30);
                     hillrasx[2] -= 1;
-                    rasxodn2[8] = "Больших хилок: " + hillrasx[2];
+                    rasxodn2[8] = getResources().getString(R.string.bighill) + hillrasx[2];
                 }
-                Snackbar.make(binding.listrasx, "Жажда " + getWater() + " голод " + getFood() + " кол-во жизни " + getXit_points(), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(binding.listrasx, getResources().getString(R.string.determination) + getWater() + getResources().getString(R.string.dehidration) + getFood() + getResources().getString(R.string.xit_points) + getXit_points(), Snackbar.LENGTH_SHORT).show();
                 recreate();
             }
         });
