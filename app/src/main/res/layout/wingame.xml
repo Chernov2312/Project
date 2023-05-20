@@ -10,10 +10,11 @@
         android:text="@string/wingame"
         android:textColor="@color/white"
         android:textSize="25sp" />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/menu"
         android:layout_gravity="right|bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_color"
         android:text="@string/menu"/>
 </FrameLayout>
