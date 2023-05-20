@@ -17,6 +17,7 @@
             android:id="@+id/fightxit_points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/black"
             android:text=""
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -26,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/monstxitpoints"
+            android:background="@color/black"
             android:textColor="@color/white"
             android:textSize="30sp" />
     </LinearLayout>

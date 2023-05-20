@@ -29,6 +29,7 @@ public class Gildia extends Character_Settings{
             if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(Gildia.this, City.class);
             startActivity(i);
+            finish();
         });
         setMenu(5);
         binding.person.setOnClickListener(v -> {
