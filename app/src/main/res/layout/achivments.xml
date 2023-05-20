@@ -1,237 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/your_achivments"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_height="532dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_achivments"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/brownmoney" />
+
+            <ImageView
+                android:id="@+id/greymoney"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/greymoney" />
+
+            <ImageView
+                android:id="@+id/brownmoney"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/goldmoney" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minmaxnet"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:text="@string/max_maxnetvors"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/goldnet"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/max_netvors"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/middlemaxnet"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:text="@string/maxmaxnetvors"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/minkills"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/minkills" />
+
+
+            <ImageView
+                android:id="@+id/middlekills"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/killer100lvl" />
+
+            <ImageView
+                android:id="@+id/maxkills"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/maxkills" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/earlykiller"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:text="@string/killedmobsmin"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/middlekiller"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:text="@string/sredkilledmobs"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/prokiller"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:text="@string/maxkilledmobs"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/maxnetvors" />
+
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/maxnetvors" />
+
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/maxnetvors" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/netvors"
+            android:layout_width="325dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:text="@string/obsnetvors"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/Return"
         android:layout_width="157dp"
         android:layout_height="37dp"
-        android:layout_gravity="bottom"
-        android:text="@string/returned"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/brownmoney"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <TextView
-        android:id="@+id/minmaxnet"
-        android:layout_width="110dp"
-        android:layout_height="53dp"
-        android:text="@string/max_maxnetvors"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.193" />
-
-    <ImageView
-        android:id="@+id/brownmoney"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/goldmoney"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.014" />
-
-    <TextView
-        android:id="@+id/goldnet"
-        android:layout_width="111dp"
-        android:layout_height="52dp"
-        android:text="@string/max_netvors"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.194" />
-
-    <ImageView
-        android:id="@+id/greymoney"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/greymoney"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/middlemaxnet"
-        android:layout_width="131dp"
-        android:layout_height="53dp"
-        android:text="@string/maxmaxnetvors"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.187" />
-
-    <ImageView
-        android:id="@+id/minkills"
-        android:layout_width="127dp"
-        android:layout_height="119dp"
-        android:background="@drawable/minkills"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/middlekills"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.316" />
-
-    <TextView
-        android:id="@+id/earlykiller"
-        android:layout_width="131dp"
-        android:layout_height="84dp"
-        android:text="@string/killedmobsmin"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
-
-    <ImageView
-        android:id="@+id/middlekills"
-        android:layout_width="134dp"
-        android:layout_height="140dp"
-        android:background="@drawable/killer100lvl"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.328" />
-
-    <TextView
-        android:id="@+id/middlekiller"
-        android:layout_width="127dp"
-        android:layout_height="76dp"
-        android:text="@string/sredkilledmobs"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
-    <ImageView
-        android:id="@+id/maxkills"
-        android:layout_width="134dp"
-        android:layout_height="140dp"
-        android:background="@drawable/maxkills"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.328" />
-
-    <TextView
-        android:id="@+id/prokiller"
-        android:layout_width="127dp"
-        android:layout_height="102dp"
-        android:text="@string/maxkilledmobs"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
-
-    <ImageView
-        android:layout_width="98dp"
-        android:layout_height="101dp"
-        android:background="@drawable/maxnetvors"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.757" />
-
-    <ImageView
-        android:layout_width="98dp"
-        android:layout_height="101dp"
-        android:background="@drawable/maxnetvors"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.757"
-        android:contentDescription="TODO" />
-
-    <ImageView
-        android:layout_width="98dp"
-        android:layout_height="101dp"
-        android:background="@drawable/maxnetvors"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.757"
-        android:contentDescription="TODO" />
-
-    <TextView
-        android:id="@+id/netvors"
-        android:layout_width="325dp"
-        android:layout_height="59dp"
-        android:text="@string/obsnetvors"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.651"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="right|bottom"
+        android:text="@string/returned" />
+</FrameLayout>
