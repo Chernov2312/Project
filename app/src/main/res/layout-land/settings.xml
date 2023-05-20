@@ -26,12 +26,20 @@
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
             android:text="@string/savegame" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/load"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonblue"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
             android:text="@string/loadgame" />
 
     </LinearLayout>
@@ -40,5 +48,9 @@
         android:id="@+id/return32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/buttonblue"
+        android:layout_margin="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:text="@string/returned" />
 </FrameLayout>

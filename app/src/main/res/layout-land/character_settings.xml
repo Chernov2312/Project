@@ -97,6 +97,9 @@
             android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolorred"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:text="@string/settings"
             android:textSize="20sp" />
 
@@ -104,6 +107,9 @@
             android:id="@+id/Inventory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolorred"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:text="@string/inventory"
             android:textSize="20sp" />
 
@@ -111,6 +117,9 @@
             android:id="@+id/achivments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolorred"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:text="@string/achivments"
             android:textSize="20sp" />
     </LinearLayout>
@@ -126,6 +135,9 @@
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttoncolorred"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
             android:text="@string/returned"
             android:textSize="20sp" />
     </LinearLayout>

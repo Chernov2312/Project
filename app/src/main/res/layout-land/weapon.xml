@@ -19,6 +19,9 @@
                 android:id="@+id/Return"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:text="@string/returned"
                 android:textSize="10sp" />
 
@@ -26,6 +29,9 @@
                 android:id="@+id/shieldbuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:text="@string/buyshield"
                 android:textSize="10sp" />
 
@@ -33,6 +39,9 @@
                 android:id="@+id/swordbuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:text="@string/buysword"
                 android:textSize="10sp" />
 
@@ -40,6 +49,9 @@
                 android:id="@+id/clothescreate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:text="@string/buyclothes"
                 android:textSize="10sp" />
 
@@ -48,6 +60,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/smallhillras"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:textSize="10sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -55,6 +70,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sredhillras"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:textSize="10sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -62,6 +80,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bighillras"
+                android:background="@drawable/browncolor"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:textSize="10sp" />
         </LinearLayout>
     </LinearLayout>

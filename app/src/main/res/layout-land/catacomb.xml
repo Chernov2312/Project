@@ -28,6 +28,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
                 android:text="@string/returned"
+                android:background="@drawable/button_color"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -36,6 +39,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:text="@string/go_boss"
+                android:background="@drawable/button_color"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -43,6 +49,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
+                android:background="@drawable/button_color"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
                 android:text="@string/easy_medium"
                 android:textSize="20sp" />
         </LinearLayout>

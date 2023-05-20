@@ -21,12 +21,18 @@
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="@string/returned"
             android:textSize="15sp" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/shieldbuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="@string/buyshield"
             android:textSize="15sp" />
 
@@ -34,6 +40,9 @@
             android:id="@+id/swordbuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="@string/buysword"
             android:textSize="15sp" />
 
@@ -41,6 +50,9 @@
             android:id="@+id/clothescreate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="@string/buyclothes"
             android:textSize="15sp" />
 
@@ -48,12 +60,18 @@
             android:id="@+id/smalbottlexit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:text="@string/smallhillras"
             android:textSize="15sp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/mediumbottlexit"
             android:layout_width="wrap_content"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:text="@string/sredhillras"
             android:textSize="15sp"/>
@@ -63,6 +81,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bighillras"
+            android:background="@drawable/browncolor"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
             android:textSize="15sp" />
     </LinearLayout>
 </FrameLayout>

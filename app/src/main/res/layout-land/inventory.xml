@@ -7,12 +7,18 @@
         android:id="@+id/Return2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/buttoncolorred"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
         android:text="@string/returned"
         android:textSize="20sp"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rasxodn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/buttoncolorred"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
         android:text="@string/supplies"
         android:textSize="20sp"/>
     <TextView
@@ -20,10 +26,12 @@
         android:layout_height="wrap_content"
         android:text="@string/yoursnar"
         android:textSize="20sp" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp" />
+
     <ListView
         android:id="@+id/predmets"
         android:layout_width="match_parent"

@@ -26,6 +26,9 @@
                 android:id="@+id/Return"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolorred"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
                 android:text="@string/returned"
                 android:textSize="25sp" />
 
@@ -33,6 +36,9 @@
                 android:id="@+id/gonext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolorred"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
                 android:text="@string/gonext"
                 android:textSize="20sp" />
 
@@ -40,6 +46,9 @@
                 android:id="@+id/attack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolorred"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
                 android:text="@string/attactmob"
                 android:textSize="25sp" />
 
@@ -47,6 +56,9 @@
                 android:id="@+id/person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolorred"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
                 android:text="@string/person"
                 android:textSize="25sp" />
         </LinearLayout>
