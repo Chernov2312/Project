@@ -30,6 +30,8 @@ public class City extends AppCompatActivity {
         binding.Return.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(City.this, Startgame.class);
             startActivity(i);
             finish();
@@ -37,6 +39,8 @@ public class City extends AppCompatActivity {
         binding.magazin.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(City.this, Shop.class);
             startActivity(i);
             finish();
@@ -44,6 +48,8 @@ public class City extends AppCompatActivity {
         binding.gild.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(City.this, Gildia.class);
             startActivity(i);
             finish();

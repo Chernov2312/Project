@@ -24,6 +24,8 @@ public class Startgame extends AppCompatActivity {
         binding.goHome.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(Startgame.this, Home.class);
             startActivity(i);
             finish();
@@ -37,6 +39,8 @@ public class Startgame extends AppCompatActivity {
         binding.gocity.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(Startgame.this, City.class);
             startActivity(i);
             finish();

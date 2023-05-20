@@ -25,6 +25,8 @@ public class Gildia extends Character_Settings{
         binding.Return.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(Gildia.this, City.class);
             startActivity(i);
         });
@@ -40,7 +42,7 @@ public class Gildia extends Character_Settings{
         binding.nachsnar.setOnClickListener(v -> {
             k = false;
             binding.nachsnar.setVisibility(View.INVISIBLE);
-            inventory2.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            inventory2.set(0, getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
             inventory2.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
             inventory2.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
             inventory2.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
@@ -51,6 +53,8 @@ public class Gildia extends Character_Settings{
         binding.podz.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
+            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             Intent i = new Intent(Gildia.this, Catacomb.class);
             startActivity(i);
             finish();
@@ -60,5 +64,13 @@ public class Gildia extends Character_Settings{
     protected void onPause() {
         super.onPause();
         stopService(intent);
+    }
+
+    public static boolean isK() {
+        return k;
+    }
+
+    public static void setK(boolean k) {
+        Gildia.k = k;
     }
 }

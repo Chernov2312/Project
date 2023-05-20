@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         ed.putInt(Settings.BOSS_XIT_POINTS, BossFight.getBossXitpoints());
         ed.putStringSet(Settings.INVENTORYY_PREFERENCE, set);
         ed.putBoolean(Settings.S_PREFERENCE, Character_Settings.getS());
+        ed.putBoolean(Settings.K, Gildia.isK());
         ed.apply();
     }
 
@@ -207,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
         Hillff[1] = sharedPreferences.getInt(Settings.HILL2_PREFERENCE, Character_Settings.getHill()[1]);
         Hillff[2] = sharedPreferences.getInt(Settings.HILL3_PREFERENCE, Character_Settings.getHill()[2]);
         setMenu(sharedPreferences.getInt(Settings.MENU_PREFERENCE, getMenu()));
+        Gildia.setK(sharedPreferences.getBoolean(Settings.K, Gildia.isK()));
         Character_Settings.setS(sharedPreferences.getBoolean(Settings.S_PREFERENCE, Character_Settings.getS()));
         Home.setBoxcheked(sharedPreferences.getInt(Settings.BOXCHEKED, Home.getBoxcheked()));
         BossFight.setBossXitpoints(sharedPreferences.getInt(Settings.BOSS_XIT_POINTS, BossFight.getBossXitpoints()));

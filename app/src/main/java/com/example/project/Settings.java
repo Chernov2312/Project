@@ -53,6 +53,7 @@ public class Settings extends Character_Settings {
     public final static String MOB = "mob";
     public final static String MOB_DAMAGE = "mob_damage";
     public final static String MUSIC = "music";
+    public final static String K = "k";
     public static int[] Foodff = {0, 0, 0};
     public static int[] Waterff = {0, 0, 0};
     public static int[] Hillff = {0, 0, 0};
@@ -137,6 +138,7 @@ public class Settings extends Character_Settings {
         Hillff[2] = sharedPreferences.getInt(HILL3_PREFERENCE, getHill()[2]);
         setMenu(sharedPreferences.getInt(MENU_PREFERENCE, getMenu()));
         setS(sharedPreferences.getBoolean(S_PREFERENCE, getS()));
+        Gildia.setK(sharedPreferences.getBoolean(K, Gildia.isK()));
         Home.setBoxcheked(sharedPreferences.getInt(BOXCHEKED, Home.getBoxcheked()));
         BossFight.setBossXitpoints(sharedPreferences.getInt(BOSS_XIT_POINTS, BossFight.getBossXitpoints()));
         Easyandmedium.setMob_xit_points(sharedPreferences.getInt(MOB_XIT_POINTS, Easyandmedium.getMob_xit_points()));
@@ -191,6 +193,7 @@ public class Settings extends Character_Settings {
         ed.putInt(MENU_PREFERENCE, getMenu());
         ed.putInt(BOSS_XIT_POINTS, BossFight.getBossXitpoints());
         ed.putBoolean(S_PREFERENCE, getS());
+        ed.putBoolean(K, Gildia.isK());
         ed.apply();
         Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
     }

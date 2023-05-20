@@ -48,6 +48,12 @@ public class Character_Settings extends MainActivity {
         if(blockdamage > 90) blockdamage = 90;
         if(mammaxxitpoints < mammaxxitpoints) maxXit_points = mammaxxitpoints;
         s = false;
+        if(Food < 0) Food = 0;
+        if(Water < 0) Water = 0;
+        if(Food == 0) Xit_points -= 10;
+        if(Water == 0) Xit_points -= 10;
+        if(Food >= 80) Xit_points += 5;
+        if(Water >= 80) Xit_points += 5;
     }
 
     @Override
