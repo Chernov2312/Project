@@ -191,10 +191,6 @@ public class Settings extends Character_Settings {
         Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
     }
 
-    public static SharedPreferences getSharedPreferences() {
-        return sharedPreferences;
-    }
-
     public static boolean isMusic() {
         return music;
     }
