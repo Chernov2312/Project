@@ -20,7 +20,7 @@ import java.util.Set;
 
 public class Settings extends Character_Settings {
     SettingsBinding binding;
-    static SharedPreferences sharedPreferences;
+    public static SharedPreferences sharedPreferences;
     public final static String GOLDS_PREFERENCE = "golds";
     public final static String LEVEL_PREFERENCE = "level";
     public final static String XIT_POINTS_PREFERENCE = "xitpoints";

@@ -52,6 +52,7 @@ public class Weapon extends Character_Settings {
             if (getGolds() >= 250) {
                 setLvlshield(getLvlshield() + 1);
                 setBlockdamage(getBlockdamage() + 5);
+                setGolds(getGolds() - 250);
                 Snackbar.make(binding.shieldbuy, getResources().getString(R.string.yourarmoruppgrade) + 5, Snackbar.LENGTH_SHORT).show();
                 binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
             }

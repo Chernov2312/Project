@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/magazin"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|right"
+            android:orientation="vertical"
+            android:background="@color/black"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/Return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/returned"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/shieldbuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buyshield"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/swordbuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buysword"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/clothescreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buyclothes"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/smalbottlexit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smallhillras"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/mediumbottlexit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sredhillras"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/bigbottlexit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bighillras"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:gravity="right"
+        android:id="@+id/moneyhave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/youhave"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</FrameLayout>

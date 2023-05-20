@@ -99,11 +99,11 @@ public class Character_Settings extends MainActivity {
             startActivity(i);
             finish();
         });
-        binding.level.setText("Уровень: " + level);
+        binding.level.setText(getResources().getString(R.string.levelnow) + level);
         binding.xitPoints.setProgress(Xit_points);
         binding.Food.setProgress(Food);
         binding.water.setProgress(Water);
-        binding.gold.setText("Gold: " + golds);
+        binding.gold.setText(getResources().getString(R.string.moneynow) + golds);
         binding.settings.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, Settings.class);
             startActivity(i);

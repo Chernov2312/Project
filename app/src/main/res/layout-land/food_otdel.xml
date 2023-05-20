@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/magazin">
+
+    <TextView
+        android:id="@+id/moneyhave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/returned"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/smallfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/small_paek"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sredfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sred_paek"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bigfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/big_paek"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/smallwater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/smallbottle"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sredwater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sredbottle"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bigwater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bigbottle"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
