@@ -16,26 +16,31 @@
         android:gravity="right"
         android:orientation="vertical">
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/person"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/buttoncolorstartgame"
+            android:text="@string/person"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/go_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:layout_margin="5dp"
             android:textColor="@color/white"
-            android:background="@drawable/button_color"
+            android:background="@drawable/buttoncolorstartgame"
             android:text="@string/goin"/>
-        <Button
-            android:id="@+id/person"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:text="@string/person"/>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="5dp"
             android:id="@+id/gocity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="@color/white"
+            android:background="@drawable/buttoncolorstartgame"
             android:text="@string/gocity"/>
     </LinearLayout>
 </RelativeLayout>
