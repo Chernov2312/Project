@@ -44,6 +44,15 @@
             android:textSize="20sp" />
         <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="5dp"
+            android:background="@drawable/button_color"
+            android:id="@+id/save"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/savegame"
+            android:textSize="20sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="5dp"
             android:id="@+id/goplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

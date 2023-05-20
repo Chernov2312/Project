@@ -20,7 +20,6 @@ import java.util.Set;
 
 public class Settings extends Character_Settings {
     SettingsBinding binding;
-    public static SharedPreferences sharedPreferences;
     public final static String GOLDS_PREFERENCE = "golds";
     public final static String LEVEL_PREFERENCE = "level";
     public final static String XIT_POINTS_PREFERENCE = "xitpoints";
@@ -58,7 +57,7 @@ public class Settings extends Character_Settings {
     public static int[] Waterff = {0, 0, 0};
     public static int[] Hillff = {0, 0, 0};
     public static boolean music = true;
-    public static Set<String> set = new HashSet<>(getInventoryy());
+    public static ArrayList<String>  strings= new ArrayList<>();
     Intent intent;
 
     @Override
@@ -66,7 +65,6 @@ public class Settings extends Character_Settings {
         super.onCreate(savedInstanceState);
         binding = SettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        sharedPreferences = getPreferences(MODE_PRIVATE);
         binding.save.setOnClickListener(v -> {
             savePreference();
         });
@@ -148,7 +146,11 @@ public class Settings extends Character_Settings {
         music = sharedPreferences.getBoolean(MUSIC, music);
         setWaterr(Waterff);
         setHill(Hillff);
-        setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(INVENTORYY_PREFERENCE, set)));
+        strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+        strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+        strings.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+        strings.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+        strings.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
     }
 
     private void savePreference() {
@@ -185,11 +187,12 @@ public class Settings extends Character_Settings {
         ed.putInt(HILL3_PREFERENCE, getHill()[2]);
         ed.putInt(MENU_PREFERENCE, getMenu());
         ed.putInt(BOSS_XIT_POINTS, BossFight.getBossXitpoints());
-        ed.putStringSet(INVENTORYY_PREFERENCE, set);
         ed.putBoolean(S_PREFERENCE, getS());
         ed.apply();
         Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
     }
+
+
 
     public static boolean isMusic() {
         return music;

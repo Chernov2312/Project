@@ -88,6 +88,7 @@ public class Character_Settings extends MainActivity {
                 Intent i = new Intent(Character_Settings.this, Easyandmedium.class);
                 startActivity(i);
             }
+            finish();
         });
         binding.Inventory.setOnClickListener(v -> {
             Intent i = new Intent(Character_Settings.this, InventoryActivity.class);
