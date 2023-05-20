@@ -30,7 +30,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/returnplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

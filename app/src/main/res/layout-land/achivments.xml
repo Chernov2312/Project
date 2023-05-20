@@ -161,10 +161,10 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Return"
-        android:layout_width="157dp"
-        android:layout_height="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         android:text="@string/returned" />
 </FrameLayout>

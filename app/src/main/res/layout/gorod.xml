@@ -15,28 +15,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom">
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="@string/person"
             android:textSize="20sp" />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="@string/returnedhome"
             android:textSize="20sp" />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/gild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="@string/go_gildia"
             android:textSize="20sp" />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/magazin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
