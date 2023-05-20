@@ -95,9 +95,9 @@
     <string name="savesuccesfull"> Сохранение успешно</string>
     <string name="yourarmoruppgrade"> Ваша защита увеличена на </string>
     <string name="yourdamageuppgrade"> Ваш урон увеличен на </string>
-    <string name="smallhill"> маленьких хилок</string>
-    <string name="sredhill"> средних хилок</string>
-    <string name="bighill"> больших хилок</string>
+    <string name="smallhill"> Маленьких хилок: </string>
+    <string name="sredhill"> Средних хилок: </string>
+    <string name="bighill"> Больших хилок: </string>
     <string name="moneynow"> Деньги: </string>
     <string name="levelnow"> Уровень: </string>
     <string name="played"> Играть</string>

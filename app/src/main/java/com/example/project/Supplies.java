@@ -27,15 +27,15 @@ public class Supplies extends Character_Settings {
         setM(2);
         intent = new Intent(Supplies.this, MyService.class);
         startService(intent);
-        String[] rasxodn2 = {"Маленький пайков: " + foodr[0],
-                "Средних пайков: " + foodr[1],
-                "Больших пайков: " + foodr[2],
-                "Маленьких бутылок: " + waterf[0],
-                "Фляг: " + waterf[1],
-                "Больших бутылок: " + waterf[2],
-                "Маленьких хилок: " + hillrasx[0],
-                "Средних хилок: " + hillrasx[1],
-                "Больших хилок: " + hillrasx[2]
+        String[] rasxodn2 = {getResources().getString(R.string.smallfoods) + foodr[0],
+                getResources().getString(R.string.sredfoods) + foodr[1],
+                getResources().getString(R.string.bigfoods) + foodr[2],
+                getResources().getString(R.string.smallbottles) + waterf[0],
+                getResources().getString(R.string.flyg) + waterf[1],
+                getResources().getString(R.string.bigbottles) + waterf[2],
+                getResources().getString(R.string.smallhill) + hillrasx[0],
+                getResources().getString(R.string.sredhill) + hillrasx[1],
+                getResources().getString(R.string.bighill) + hillrasx[2]
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, rasxodn2);
