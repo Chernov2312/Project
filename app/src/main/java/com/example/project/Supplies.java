@@ -86,7 +86,7 @@ public class Supplies extends Character_Settings {
                     hillrasx[2] -= 1;
                     rasxodn2[8] = getResources().getString(R.string.bighill) + hillrasx[2];
                 }
-                Snackbar.make(binding.listrasx, getResources().getString(R.string.determination) + getWater() + getResources().getString(R.string.dehidration) + getFood() + getResources().getString(R.string.xit_points) + getXit_points(), Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(Supplies.this,  getResources().getString(R.string.determination) + getWater() + getResources().getString(R.string.dehidration) + getFood() + getResources().getString(R.string.xit_points) + getXit_points(), Toast.LENGTH_SHORT).show();
                 recreate();
             }
         });
