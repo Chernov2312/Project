@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         Character_Settings.setLvlmag(1);
         Character_Settings.setLvlarmor(1);
         Character_Settings.setS(true);
+        Gildia.setK(true);
         Character_Settings.setInventoryy(new ArrayList<String>());
     }
 
