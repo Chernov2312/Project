@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import com.example.project.databinding.WeaponBinding;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
+
 public class Weapon extends Character_Settings {
     WeaponBinding binding;
     Intent intent;
@@ -24,12 +26,11 @@ public class Weapon extends Character_Settings {
         intent = new Intent(Weapon.this, MyService.class);
         startService(intent);
         binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
-        if (Gildia.isK()){
+        if (Gildia.isK()) {
             binding.clothescreate.setVisibility(View.INVISIBLE);
             binding.shieldbuy.setVisibility(View.INVISIBLE);
             binding.swordbuy.setVisibility(View.INVISIBLE);
-        }
-        else {
+        } else {
             binding.clothescreate.setVisibility(View.VISIBLE);
             binding.swordbuy.setVisibility(View.VISIBLE);
             binding.shieldbuy.setVisibility(View.VISIBLE);
@@ -94,9 +95,19 @@ public class Weapon extends Character_Settings {
         });
     }
 
+    ArrayList<String> inventory2 = getInventoryy();
+
     @Override
     protected void onPause() {
         super.onPause();
         stopService(intent);
+        if (!Gildia.isK()) {
+            inventory2.set(0, getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            inventory2.set(1, getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            inventory2.set(2, getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            inventory2.set(3, getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+            inventory2.set(4, getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
+            setInventoryy(inventory2);
+        }
     }
 }
