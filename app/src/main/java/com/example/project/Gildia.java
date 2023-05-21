@@ -51,7 +51,7 @@ public class Gildia extends Character_Settings{
             inventory2.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
             setDamage(getDamage() + 50);
             setBlockdamage(getBlockdamage() + 15);
-            Snackbar.make(binding.nachsnar, "Вы получили снаряжение короля. Теперь вы можете его улучшить в магазине.", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(binding.nachsnar, getResources().getString(R.string.nachsnarup), Snackbar.LENGTH_LONG).show();
         });
         binding.podz.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
