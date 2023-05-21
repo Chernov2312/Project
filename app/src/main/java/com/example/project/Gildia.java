@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import com.example.project.databinding.GildiaBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ public class Gildia extends Character_Settings{
     Intent intent;
     GildiaBinding binding;
     ArrayList<String> inventory2 = getInventoryy();
-    private static volatile boolean k = true;
+    private static boolean k = true;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ public class Gildia extends Character_Settings{
             inventory2.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
             setDamage(getDamage() + 50);
             setBlockdamage(getBlockdamage() + 15);
+            Snackbar.make(binding.nachsnar, "Вы получили снаряжение короля. Теперь вы можете его улучшить в магазине.", Snackbar.LENGTH_LONG).show();
         });
         binding.podz.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);

@@ -10,7 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class Home extends Character_Settings {
     HomeBinding binding;
-    volatile static int boxcheked = 0;
+    public static int boxcheked = 0;
     int[] foodd = getFoodf();
     int[] waterd = getWaterr();
     Intent intent;

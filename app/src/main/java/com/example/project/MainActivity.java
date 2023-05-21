@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newGame() {
+        Home.setBoxcheked(0);
         Character_Settings.setGolds(1000);
         Character_Settings.setLevel(1);
         Character_Settings.setXit_points(100);

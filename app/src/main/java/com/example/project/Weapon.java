@@ -2,6 +2,7 @@ package com.example.project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,16 @@ public class Weapon extends Character_Settings {
         intent = new Intent(Weapon.this, MyService.class);
         startService(intent);
         binding.moneyhave.setText(getResources().getString(R.string.youhave) + getGolds() + getResources().getString(R.string.dolar));
+        if (Gildia.isK()){
+            binding.clothescreate.setVisibility(View.INVISIBLE);
+            binding.shieldbuy.setVisibility(View.INVISIBLE);
+            binding.swordbuy.setVisibility(View.INVISIBLE);
+        }
+        else {
+            binding.clothescreate.setVisibility(View.VISIBLE);
+            binding.swordbuy.setVisibility(View.VISIBLE);
+            binding.shieldbuy.setVisibility(View.VISIBLE);
+        }
         binding.smalbottlexit.setOnClickListener(v -> {
             if (getGolds() >= 50) {
                 setGolds(getGolds() - 50);
