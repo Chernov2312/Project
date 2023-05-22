@@ -48,7 +48,7 @@
     <string name="monstxitpoints"> Кол-во жизни у монстра: </string>
     <string name="gonext"> Пойди дальше </string>
     <string name="attactmob"> Атаковать </string>
-    <string name="youhave"> У вас есть </string>
+    <string name="youhave"> У вас есть &#160;</string>
     <string name="gofoodotdel"> Пойти в отдел с продуктами </string>
     <string name="goweaponotdel"> Пойти в оружейний отдел </string>
     <string name="songs"> Звуки</string>
@@ -104,9 +104,9 @@
     <string name="bigbottles"> Больших бутылок:&#160; </string>
     <string name="flyg"> Фляг:&#160; </string>
     <string name="smallbottles"> Маленьких бутылок: &#160;</string>
-    <string name="smallfoods"> Маленьких пайков: &#160;</string>
-    <string name="sredfoods"> Средних пайков: &#160;</string>
-    <string name="bigfoods"> Больших пайков: &#160;</string>
+    <string name="smallfoods"> Маленьких пайков &#160;</string>
+    <string name="sredfoods"> Средних пайков &#160;</string>
+    <string name="bigfoods"> Больших пайков &#160;</string>
     <string name="backtomenu"> Выйти в меню </string>
     <string name="nachsnarup"> Вы получили снаряжение короля. Теперь вы можете его улучшить в магазине. </string>
 </resources>
