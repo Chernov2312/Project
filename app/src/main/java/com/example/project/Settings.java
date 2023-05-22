@@ -148,6 +148,7 @@ public class Settings extends Character_Settings {
         music = sharedPreferences.getBoolean(MUSIC, music);
         setWaterr(Waterff);
         setHill(Hillff);
+        strings.clear();
         if (Character_Settings.getDamage() != 20) {
             strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
             strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
