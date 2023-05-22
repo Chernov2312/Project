@@ -224,11 +224,11 @@ public class MainActivity extends AppCompatActivity {
         Character_Settings.setInventoryy(new ArrayList<>(sharedPreferences.getStringSet(Settings.INVENTORYY_PREFERENCE, set)));
         Snackbar.make(binding.save, getResources().getString(R.string.loadsave), Snackbar.LENGTH_SHORT).show();
         if (Character_Settings.getDamage() != 20) {
-            strings.add(getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
-            strings.add(getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
-            strings.add(getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
-            strings.add(getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
-            strings.add(getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
+            strings.set(0,getResources().getString(R.string.sword) + Character_Settings.getLvlmech() + getResources().getString(R.string.lvl));
+            strings.add(1,getResources().getString(R.string.nagr) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(2,getResources().getString(R.string.boots) + Character_Settings.getLvlarmor() + getResources().getString(R.string.lvl));
+            strings.add(3,getResources().getString(R.string.shield) + Character_Settings.getLvlshield() + getResources().getString(R.string.lvl));
+            strings.add(4,getResources().getString(R.string.magagrt) + Character_Settings.getLvlmag() + getResources().getString(R.string.lvl));
             Character_Settings.setInventoryy(strings);
         }
     }
