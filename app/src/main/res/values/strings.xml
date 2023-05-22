@@ -55,7 +55,7 @@
     <string name="savegame"> Сохранить игру </string>
     <string name="loadgame"> Загрузить игру </string>
     <string name="behindhome">Вы находитесь у входа в дом </string>
-    <string name="goin"> Войти в него </string>
+    <string name="goin"> Войти в дом </string>
     <string name="gocity"> Идти в город </string>
     <string name="buyshield"> Улучшить щит 250 </string>
     <string name="buysword"> Улучшить меч 300 </string>
