@@ -54,6 +54,10 @@ public class Character_Settings extends MainActivity {
         if(Water == 0) Xit_points -= 10;
         if(Food >= 80) Xit_points += 5;
         if(Water >= 80) Xit_points += 5;
+        if(getXit_points() == 0){
+            Intent i = new Intent(Character_Settings.this, GameLose.class);
+            startActivity(i);
+        }
     }
 
     @Override

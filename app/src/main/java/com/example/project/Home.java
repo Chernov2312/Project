@@ -26,7 +26,10 @@ public class Home extends Character_Settings {
         binding.Return3.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
-            setFood(Character_Settings.getFood() - 1);
+            if(Character_Settings.getXit_points() == 0){
+                Intent i = new Intent(Home.this, GameLose.class);
+                startActivity(i);
+            }
             Intent i = new Intent(Home.this, Startgame.class);
             startActivity(i);
             finish();
@@ -61,6 +64,10 @@ public class Home extends Character_Settings {
             Character_Settings.setFood(Character_Settings.getFood() - 2);
             if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
             if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getXit_points() == 0){
+                Intent i = new Intent(Home.this, GameLose.class);
+                startActivity(i);
+            }
             setFoodd(foodd);
             setWaterr(waterd);
 
