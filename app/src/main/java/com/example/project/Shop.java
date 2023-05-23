@@ -28,17 +28,17 @@ public class Shop extends Character_Settings {
         binding.Return.setOnClickListener(v -> {
             setWater(getWater() - 2);
             setFood(getFood() - 1);
-            Intent i = new Intent(Shop.this, City.class);
-            startActivity(i);
-            finish();
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
-            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getXit_points() == 0){
+            if(Character_Settings.getFood() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getXit_points() <= 0){
                 Intent ig = new Intent(Shop.this, GameLose.class);
                 startActivity(ig);
-            }
+            }else{
+            Intent i = new Intent(Shop.this, City.class);
+            startActivity(i);}
+            finish();
         });
         binding.foodotdel.setOnClickListener(v -> {
             Intent i = new Intent(Shop.this, Buyproduct.class);

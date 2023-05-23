@@ -18,30 +18,38 @@ public class Catacomb extends MainActivity{
         intent = new Intent(Catacomb.this, MyService.class);
         startService(intent);
         binding.return4.setOnClickListener(v -> {
-            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getFood() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getXit_points() <= 0){
+                Intent i = new Intent(Catacomb.this, GameLose.class);
+                startActivity(i);
+            }else{
             Intent i = new Intent(Catacomb.this, Gildia.class);
-            startActivity(i);
+            startActivity(i);}
             finish();
         });
         binding.easyandmedium.setOnClickListener(v -> {
-            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getFood() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getXit_points() <= 0){
+                Intent i = new Intent(Catacomb.this, GameLose.class);
+                startActivity(i);
+            }else{
             Intent i = new Intent(Catacomb.this, Easyandmedium.class);
-            startActivity(i);
+            startActivity(i);}
             finish();
         });
         binding.Boss.setOnClickListener(v -> {
             Character_Settings.setWater(Character_Settings.getWater() - 4);
             Character_Settings.setFood(Character_Settings.getFood() - 2);
-            if(Character_Settings.getFood() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getWater() == 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
-            if(Character_Settings.getXit_points() == 0){
+            if(Character_Settings.getFood() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getWater() <= 0) Character_Settings.setXit_points(Character_Settings.getXit_points() - 10);
+            if(Character_Settings.getXit_points() <= 0){
                 Intent i = new Intent(Catacomb.this, GameLose.class);
                 startActivity(i);
-            }
+            }else{
             Intent i = new Intent(Catacomb.this, BossFight.class);
-            startActivity(i);
+            startActivity(i);}
             finish();
         });
     }
