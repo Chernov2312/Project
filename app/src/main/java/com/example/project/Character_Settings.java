@@ -54,6 +54,7 @@ public class Character_Settings extends MainActivity {
         if(Water == 0) Xit_points -= 10;
         if(Food >= 80) Xit_points += 5;
         if(Water >= 80) Xit_points += 5;
+        if(Xit_points < 0) Xit_points = 0;
     }
 
     @Override
