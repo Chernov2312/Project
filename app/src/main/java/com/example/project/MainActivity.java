@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(binding.save, getResources().getString(R.string.savesuccesfull), Snackbar.LENGTH_SHORT).show();
         });
         binding.exit.setOnClickListener(v -> {
+            savegame();
             this.finishAffinity();
         });
         binding.load.setOnClickListener(v -> {
